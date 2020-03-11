@@ -17,4 +17,8 @@ public class Classifica {
 	public boolean addpunti(String nome, int punti) {
 		return false;
 	}
+	Squadra s=map.getNome;
+	s.setPunti(s.getPunti+punti);
+	return true;
+	
 } // classe
