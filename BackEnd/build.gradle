@@ -1,0 +1,97 @@
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'eclipse-wtp'
+
+def environment = hasProperty('env') ? env : 'local'
+
+ext.extProgram = new Properties()
+def extFile = file("etc/$environment/specific.properties");
+if(extFile.canRead()) {
+	extProgram.load(extFile.newReader())
+}
+
+eclipse {
+	project {
+		name = "ChampionshipBE"
+	}
+	wtp {
+		component {
+			contextPath = "championship"
+			resource deployPath: '/', sourcePath: 'webapp'
+		}
+		facet {
+			facet name: 'jst.web', version: '3.1'
+		}
+	}
+}
+
+configurations.all {
+    // Check for updates every build
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+	maven {
+		url 'http://camerassoes-test.intra.camera.it:8081/artifactory/Esinware'
+	}
+	flatDir {
+		dirs 'lib'
+	}
+}
+
+war {
+	baseName "championship"
+}
+
+sourceSets {
+	main {
+		resources {
+			srcDir "etc/$environment"
+		}
+	}
+}
+
+dependencies {
+	compileOnly 'javax.servlet:javax.servlet-api:3.1.0'
+	compile group: 'org.springframework', name: 'spring-webmvc', version: '5.2.0.RELEASE'
+	compile group: 'org.springframework.security', name: 'spring-security-web', version: '5.2.0.RELEASE'
+	//compile group: 'org.springframework.security', name: 'spring-security-web', version: '5.0.1.RELEASE'
+	compile group: 'org.springframework.security', name: 'spring-security-config', version: '5.2.0.RELEASE'
+	//compile group: 'org.springframework.security', name: 'spring-security-config', version: '5.0.1.RELEASE'
+	compile group: 'org.springframework.security', name: 'spring-security-oauth2-client', version: '5.2.0.RELEASE'
+	//compile group: 'org.springframework.security', name: 'spring-security-oauth2-client', version: '5.0.1.RELEASE'
+	compile group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.0'
+	//compile group: 'org.springframework.security', name: 'spring-security-jwt', version: '1.0.11.RELEASE'
+	//compile group: 'org.springframework.security', name: 'spring-security-jwt', version: '1.0.9.RELEASE'
+	compile group: 'org.springframework.security', name: 'spring-security-ldap', version: '5.2.0.RELEASE'
+	//compile group: 'org.springframework.security', name: 'spring-security-ldap', version: '5.0.1.RELEASE'
+  compile group: 'org.eclipse.persistence', name: 'org.eclipse.persistence.jpa', version: '2.7.1'
+  compile group: 'org.springframework.data', name: 'spring-data-jpa', version: '2.0.3.RELEASE'
+	compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'  
+	compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.25' 
+	compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.4'
+	compile group: 'org.postgresql', name: 'postgresql', version: '42.2.1'
+	compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.5'
+	compile group: 'org.apache.httpcomponents', name: 'httpmime', version: '4.5.5'
+	compile group: 'commons-io', name: 'commons-io', version: '2.6'
+	//compile group: 'io.github.classgraph', name: 'classgraph', version: '4.4.12'
+	//compile group: 'ma.glasnost.orika', name: 'orika-core', version: '1.5.2'
+	//compile ':BeanMapping'
+	compile group: 'it.esinware.utility', name: 'mapping', version: '0.1.0', changing: true
+	compile group: 'org.hibernate', name: 'hibernate-validator', version: '6.0.17.Final'
+  
+  testCompile group: 'junit', name: 'junit', version: '4.12'
+	testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.4.0'
+  testRuntime group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.4.0'
+	testRuntime group: 'org.springframework', name: 'spring-test', version: '5.1.5.RELEASE'
+
+}
+
+test {
+//useJUnitPlatform()
+  testLogging {
+      events "passed", "skipped", "failed", "standardOut", "standardError"
+  }
+}
