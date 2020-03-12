@@ -2,39 +2,39 @@ package it.esinware.championship.domain;
 
 public class Partita {
 
-	private Squadra a;
-	private Squadra b;
-	int goalCasa;
-	int goalOspite;
+	private String homeTeam;
+	private String guestTeam;
+	int homeScore;
+	int guestScore;
 
-	public Partita(Squadra a, Squadra b) {
-		this.a = a;
-		this.b = b;
-		goalCasa = -1;
-		goalOspite = -1;
+	public Partita(String homeTeam,String guestTeam) {
+		this.homeTeam = homeTeam;
+		this.guestTeam = guestTeam;
+		homeScore = -1;
+		guestScore = -1;
 	} // costruttore
 
 	public Partita(Partita p) {
-		a = p.a;
-		b = p.b;
+		homeTeam = p.homeTeam;
+		guestTeam= p.guestTeam;
 	}
 
 	// metodi get e set
-	public Squadra getSquadraCasa() {
-		return a;
+	public Squadra gethomeTeam() {
+		return homeTeam;
 	}
 
-	public Squadra getSquadraOspite() {
-		return b;
+	public Squadra getguestTeam() {
+		return guestTeam;
 	}
 
-	public void setRisultato(int goalCasa, int goalOspite) {
-		this.goalCasa = goalCasa;
-		this.goalOspite = goalOspite;
+	public void setRisultato(int homeScore, int guestScore) {
+		this.homeScore = homeScore;
+		this.guestScore = guestScore;
 	}
 
 	// metodo che manda in output una stringa con il risultato
 	public String toString() {
-		return a + "-" + b + ":" + goalCasa + "-" + goalOspite;
+		return homeTeam + "-" + guestTeam + ":" + homeScore + "-" + guestScore;
 	}
 } // classe
