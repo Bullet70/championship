@@ -20,11 +20,11 @@ public class Partita {
 	}
 
 	// metodi get e set
-	public Squadra gethomeTeam() {
+	private String gethomeTeam() {
 		return homeTeam;
 	}
 
-	public Squadra getguestTeam() {
+	private String getguestTeam() {
 		return guestTeam;
 	}
 

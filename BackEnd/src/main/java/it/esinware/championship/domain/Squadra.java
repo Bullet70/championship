@@ -1,21 +1,21 @@
 package it.esinware.championship.domain;
 public class Squadra implements Comparable<Squadra> {
 
-	private String nome;
+	private String name;
 
 	// costruttore
-	public Squadra(String nome) {
-		this.nome = nome;
+	public Squadra(String name) {
+		this.name = name;
 	}
 
 	// metodi get e set
-	private String getNome() {
-		return nome;
+	private String getName() {
+		return name;
 	}
 
 	// metodo toString
 	public String tostring(){
-		return nome+"p";
+		return name+"p";
 	}
 	
 	// ordinamento oggetti di tipo squadra
