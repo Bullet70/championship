@@ -23,14 +23,14 @@ public class Campionato {
 	public void setEndYear(int endYear) {
 		this.endYear = endYear;
 	}
-	
+	//costruttore
 	public Campionato (String nameChampionship,int startYear,int endYear) {
 		this.nameChampionship=nameChampionship;
 		this.startYear=startYear;
 		this.endYear=endYear;
 		
 	}
-	
+	//costruttore di copia profonda
 	public Campionato (Campionato campionato) {
 		nameChampionship=campionato.nameChampionship;
 		startYear=campionato.startYear;
