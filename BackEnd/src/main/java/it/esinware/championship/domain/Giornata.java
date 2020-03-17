@@ -28,7 +28,11 @@ public class Giornata {
 	public void setNumberRound(int numberRound) {
 		this.numberRound = numberRound;
 	}
-	 
+	 public Giornata(Giornata g) {
+		 date=g.date;
+		 match=g.match;
+		 numberRound=g.numberRound;
+	 }
 	
 	
 

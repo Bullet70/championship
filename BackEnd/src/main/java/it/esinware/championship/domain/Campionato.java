@@ -24,6 +24,14 @@ public class Campionato {
 		this.endYear = endYear;
 	}
 	
+	public Campionato (String nameChampionship,int startYear,int endYear) {
+		this.nameChampionship=nameChampionship;
+		this.startYear=startYear;
+		this.endYear=endYear;
+		
+	}
+	
+	
 	
 	
 
