@@ -31,6 +31,14 @@ public class Campionato {
 		
 	}
 	
+	public Campionato (Campionato campionato) {
+		nameChampionship=campionato.nameChampionship;
+		startYear=campionato.startYear;
+		endYear=campionato.endYear;
+		
+		
+		
+	}
 	
 	
 	

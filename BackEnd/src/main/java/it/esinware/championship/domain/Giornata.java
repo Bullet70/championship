@@ -28,6 +28,12 @@ public class Giornata {
 	public void setNumberRound(int numberRound) {
 		this.numberRound = numberRound;
 	}
+	public Giornata(int date, String match, int numberRound) {
+		this.date=date;
+		this.match=match;
+		this.numberRound=numberRound;
+		
+	}
 	 public Giornata(Giornata g) {
 		 date=g.date;
 		 match=g.match;
