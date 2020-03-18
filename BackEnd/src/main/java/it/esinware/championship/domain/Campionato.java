@@ -1,6 +1,12 @@
 package it.esinware.championship.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Campionato {
+	
+	@Id
 	private String nameChampionship;
 	private int startYear;
 	private int endYear;

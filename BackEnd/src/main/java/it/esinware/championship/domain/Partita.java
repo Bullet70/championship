@@ -1,7 +1,13 @@
 package it.esinware.championship.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Partita {
 
+	@Id
+	private Long id;
 	private String homeTeam;
 	private String guestTeam;
 	int homeScore;

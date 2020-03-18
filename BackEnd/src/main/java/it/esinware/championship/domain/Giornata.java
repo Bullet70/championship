@@ -1,6 +1,12 @@
 package it.esinware.championship.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Giornata {
+	@Id
+	private Long id;
 	private int date;
 	private String match;
 	private int numberRound;

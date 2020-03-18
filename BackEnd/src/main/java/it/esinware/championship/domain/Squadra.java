@@ -1,6 +1,13 @@
 package it.esinware.championship.domain;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Squadra implements Comparable<Squadra> {
 
+	@Id
+	private Long id;
 	private String name;
 
 	// costruttore
