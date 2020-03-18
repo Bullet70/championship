@@ -36,7 +36,6 @@ configurations.all {
 }
 
 repositories {
-	mavenLocal()
 	mavenCentral()
 }
 
