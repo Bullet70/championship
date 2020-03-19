@@ -15,6 +15,8 @@ if(extFile.canRead()) {
 	extProgram.load(extFile.newReader())
 }
 
+sourceCompatibility = '1.8'
+
 eclipse {
 	project {
 		name = "ChampionshipBE"
@@ -36,7 +38,6 @@ configurations.all {
 }
 
 repositories {
-	mavenLocal()
 	mavenCentral()
 }
 
