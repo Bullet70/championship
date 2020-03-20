@@ -8,13 +8,13 @@ public class Giornata {
 	@Id
 	private Long id;
 	private int day;
-	private String match;
+	private String partita;
 	private int numberRound;
 	
 	//costruttore
-		public Giornata(int day, String match, int numberRound) {
+		public Giornata(int day, String partita, int numberRound) {
 			this.day=day;
-			this.match=match;
+			this.partita=partita;
 			this.numberRound=numberRound;
 			}
 		
@@ -25,7 +25,7 @@ public class Giornata {
 		//costruttore di copia profonda
 		 public Giornata(Giornata g) {
 			 day=g.day;
-			 match=g.match;
+			 partita=g.partita;
 			 numberRound=g.numberRound;
 		 }
 		
@@ -38,12 +38,12 @@ public class Giornata {
 		this.day = day;
 	}
 
-	public String getMatch() {
-		return match;
+	public String getPartita() {
+		return partita;
 	}
 
-	public void setMatch(String match) {
-		this.match = match;
+	public void setPartita(String partita) {
+		this.partita = partita;
 	}
 
 	public int getNumberRound() {
