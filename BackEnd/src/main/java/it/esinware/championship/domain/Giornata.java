@@ -7,16 +7,35 @@ import javax.persistence.Id;
 public class Giornata {
 	@Id
 	private Long id;
-	private int date;
+	private int day;
 	private String match;
 	private int numberRound;
+	
+	//costruttore
+		public Giornata(int day, String match, int numberRound) {
+			this.day=day;
+			this.match=match;
+			this.numberRound=numberRound;
+			}
+		
+		private Giornata() {
+			
+		} //costruttore senza parametri
+		
+		//costruttore di copia profonda
+		 public Giornata(Giornata g) {
+			 day=g.day;
+			 match=g.match;
+			 numberRound=g.numberRound;
+		 }
+		
 	//get/set
-	public int getDate() {
-		return date;
+	public int getDay() {
+		return day;
 	}
 	
-	public void setDate(int date) {
-		this.date = date;
+	public void setDay(int day) {
+		this.day = day;
 	}
 
 	public String getMatch() {
@@ -34,24 +53,5 @@ public class Giornata {
 	public void setNumberRound(int numberRound) {
 		this.numberRound = numberRound;
 	}
-	//costruttore
-	public Giornata(int date, String match, int numberRound) {
-		this.date=date;
-		this.match=match;
-		this.numberRound=numberRound;
-		}
 	
-	private Giornata() {
-		
-	} //costruttore senza parametri
-	
-	//costruttore di copia profonda
-	 public Giornata(Giornata g) {
-		 date=g.date;
-		 match=g.match;
-		 numberRound=g.numberRound;
-	 }
-	
-	
-
-}
+} //classe

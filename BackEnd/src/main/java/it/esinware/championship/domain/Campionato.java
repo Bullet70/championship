@@ -11,6 +11,24 @@ public class Campionato {
 	private int startYear;
 	private int endYear;
 	
+	//costruttore
+		public Campionato (String nameChampionship,int startYear,int endYear) {
+			this.nameChampionship=nameChampionship;
+			this.startYear=startYear;
+			this.endYear=endYear;
+			}
+		
+		private Campionato () {
+			
+		} //costruttore senza parametri
+		
+		//costruttore di copia profonda
+		public Campionato (Campionato campionato) {
+			nameChampionship=campionato.nameChampionship;
+			startYear=campionato.startYear;
+			endYear=campionato.endYear;
+			}
+	
 	public String getNameChampionship() {
 		return nameChampionship;
 	}
@@ -29,28 +47,6 @@ public class Campionato {
 	public void setEndYear(int endYear) {
 		this.endYear = endYear;
 	}
-	//costruttore
-	public Campionato (String nameChampionship,int startYear,int endYear) {
-		this.nameChampionship=nameChampionship;
-		this.startYear=startYear;
-		this.endYear=endYear;
-		}
-	
-	private Campionato () {
-		
-	} //costruttore senza parametri
-	
-	//costruttore di copia profonda
-	public Campionato (Campionato campionato) {
-		nameChampionship=campionato.nameChampionship;
-		startYear=campionato.startYear;
-		endYear=campionato.endYear;
-		
-		
-		
-	}
 	
 	
-	
-
-}
+} //classe
