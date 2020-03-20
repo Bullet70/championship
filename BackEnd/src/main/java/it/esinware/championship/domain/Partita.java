@@ -19,12 +19,16 @@ public class Partita {
 		homeScore = -1;
 		guestScore = -1;
 	} // costruttore
-
+	
+	private Partita() {
+		
+	} //costruttore senza parametri
+	
 	public Partita(Partita p) {
 		homeTeam = p.homeTeam;
 		guestTeam= p.guestTeam;
 	}
-
+	
 	// metodi get e set
 	private String gethomeTeam() {
 		return homeTeam;

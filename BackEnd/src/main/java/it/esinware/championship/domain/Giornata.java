@@ -39,8 +39,12 @@ public class Giornata {
 		this.date=date;
 		this.match=match;
 		this.numberRound=numberRound;
+		}
+	
+	private Giornata() {
 		
-	}
+	} //costruttore senza parametri
+	
 	//costruttore di copia profonda
 	 public Giornata(Giornata g) {
 		 date=g.date;

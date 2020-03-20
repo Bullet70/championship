@@ -34,8 +34,12 @@ public class Campionato {
 		this.nameChampionship=nameChampionship;
 		this.startYear=startYear;
 		this.endYear=endYear;
+		}
+	
+	private Campionato () {
 		
-	}
+	} //costruttore senza parametri
+	
 	//costruttore di copia profonda
 	public Campionato (Campionato campionato) {
 		nameChampionship=campionato.nameChampionship;

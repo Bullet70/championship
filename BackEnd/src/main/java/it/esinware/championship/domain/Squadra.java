@@ -14,6 +14,9 @@ public class Squadra implements Comparable<Squadra> {
 	public Squadra(String name) {
 		this.name = name;
 	}
+	private Squadra () {
+		
+	} //costruttore senza parametri
 
 	// metodi get e set
 	private String getName() {
