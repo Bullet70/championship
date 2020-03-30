@@ -1,52 +1,26 @@
 package it.esinware.championship.domain;
 
+import java.util.Date;
+import java.util.SortedSet;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OrderBy;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import lombok.Data;
 
+@Data
 @Entity
 public class Campionato {
 	
 	@Id
-	private String nameChampionship;
-	private int startYear;
-	private int endYear;
-	
-	//costruttore
-		public Campionato (String nameChampionship,int startYear,int endYear) {
-			this.nameChampionship=nameChampionship;
-			this.startYear=startYear;
-			this.endYear=endYear;
-			}
-		
-		private Campionato () {
-			
-		} //costruttore senza parametri
-		
-		//costruttore di copia profonda
-		public Campionato (Campionato campionato) {
-			nameChampionship=campionato.nameChampionship;
-			startYear=campionato.startYear;
-			endYear=campionato.endYear;
-			}
-	
-	public String getNameChampionship() {
-		return nameChampionship;
-	}
-	public void setNameChampionship(String nameChampionship) {
-		this.nameChampionship = nameChampionship;
-	}
-	public int getStartYear() {
-		return startYear;
-	}
-	public void setStartYear(int startYear) {
-		this.startYear = startYear;
-	}
-	public int getEndYear() {
-		return endYear;
-	}
-	public void setEndYear(int endYear) {
-		this.endYear = endYear;
-	}
-	
-	
-} //classe
+	private Long id;
+	@Temporal(TemporalType.DATE)
+	private Date startYear;
+	@Temporal(TemporalType.DATE)
+	private Date endYear;
+	@OneToMany
+	@OrderBy("numberRound")
+	private SortedSet<Giornata> fixtures;
+}

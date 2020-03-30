@@ -1,50 +1,21 @@
 package it.esinware.championship.domain;
 
+import java.util.SortedSet;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OrderBy;
+import lombok.Data;
 
+@Data
 @Entity
 public class Partita {
 
 	@Id
 	private Long id;
-	private String homeTeam;
-	private String guestTeam;
-	int homeScore;
-	int guestScore;
-
-	public Partita(String homeTeam,String guestTeam) {
-		this.homeTeam = homeTeam;
-		this.guestTeam = guestTeam;
-		homeScore = -1;
-		guestScore = -1;
-	} // costruttore
-	
-	private Partita() {
-		
-	} //costruttore senza parametri
-	
-	public Partita(Partita p) {
-		homeTeam = p.homeTeam;
-		guestTeam= p.guestTeam;
-	}
-	
-	// metodi get e set
-	private String gethomeTeam() {
-		return homeTeam;
-	}
-
-	private String getguestTeam() {
-		return guestTeam;
-	}
-
-	public void setRisultato(int homeScore, int guestScore) {
-		this.homeScore = homeScore;
-		this.guestScore = guestScore;
-	}
-
-	// metodo che manda in output una stringa con il risultato
-	public String toString() {
-		return homeTeam + "-" + guestTeam + ":" + homeScore + "-" + guestScore;
-	}
-} // classe
+	private Squadra homeTeam;
+	private Squadra guestTeam;
+	@OneToMany
+	@OrderBy("minute")
+	private SortedSet<Score> score;
+}
