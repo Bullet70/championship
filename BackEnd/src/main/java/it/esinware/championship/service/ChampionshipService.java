@@ -18,4 +18,9 @@ public class ChampionshipService {
 		//TODO Implement mapping from entity to view model
 		return model;
 	}
+	
+	public ChampionshipModel removeOne(Long id) {
+		ChampionshipModel model= new ChampionshipModel();
+		Campionato campionato = repos.deleteByld(id);
+	}
 }
