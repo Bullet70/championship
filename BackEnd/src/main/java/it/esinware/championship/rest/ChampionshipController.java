@@ -20,4 +20,22 @@ public class ChampionshipController {
 	public ResponseEntity<ChampionshipModel> loadChampionship(@PathVariable Long id) {
 		return ResponseEntity.ok(service.loadCampionato(id));
 	}
+	
+	public ResponseEntity<ChampionshipModel> deleteChampionship(@PathVariable Long id) {
+		return ResponseEntity.ok(service.deleteCampionato(id));
+	}
+	
+	public ResponseEntity<ChampionshipModel> loadPartita(@PathVariable Long id) {
+		return ResponseEntity.ok(service.loadPartita(id));
+	}
+	
+	public ResponseEntity<ChampionshipModel> loadSquadra(@PathVariable Long id) {
+		return ResponseEntity.ok(service.loadSquadra(id));
+	}
+	
+	public ResponseEntity<ChampionshipModel> loadGiornata(@PathVariable Long id) {
+		return ResponseEntity.ok(service.loadGiornata(id));
+	}
+	
+	
 }

@@ -23,4 +23,27 @@ public class ChampionshipService {
 		ChampionshipModel model= new ChampionshipModel();
 		Campionato campionato = repos.deleteByld(id);
 	}
+	
+	public ChampionshipModel loadPartita(Long id) {
+		ChampionshipModel model = new ChampionshipModel();
+		Partita partita = repos.getOne(id);
+		//TODO Implement mapping from entity to view model
+		return model;
+	}
+	
+	public ChampionshipModel loadSquadra(Long id) {
+		ChampionshipModel model = new ChampionshipModel();
+		Squadra squadra= repos.getOne(id);
+		//TODO Implement mapping from entity to view model
+		return model;
+	}
+	
+	public ChampionshipModel loadGiornata(Long id) {
+		ChampionshipModel model = new ChampionshipModel();
+		Giornata giornata= repos.getOne(id);
+		//TODO Implement mapping from entity to view model
+		return model;
+	}
+	
+	
 }
