@@ -6,27 +6,21 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 import it.esinware.championship.dto.ChampionshipModel;
-import it.esinware.championship.service.ChampionshipService;
+import it.esinware.championship.service.PartitaService;
 
-@RestController
-@RequestMapping(path = "championship")
-public class ChampionshipController {
 
+@SuppressWarnings("unused")
+public class PartitaController {
+	
 	@Autowired
-	private ChampionshipService service;
+	private PartitaService service;
 	
 	
 	@GetMapping(path = "{id}")
-	public ResponseEntity<ChampionshipModel> loadChampionship(@PathVariable Long id) {
-		return ResponseEntity.ok(service.loadCampionato(id));
+	public ResponseEntity<ChampionshipModel> loadPartita(@PathVariable Long id) {
+		return ResponseEntity.ok(service.loadPartita(id));
 	}
-	
-	public ResponseEntity<ChampionshipModel> deleteChampionship(@PathVariable Long id) {
-		return ResponseEntity.ok(service.deleteCampionato(id));
-	}
-	
-	
-	
-	
+
 }

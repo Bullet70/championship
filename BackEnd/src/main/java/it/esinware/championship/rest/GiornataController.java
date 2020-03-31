@@ -6,27 +6,21 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 import it.esinware.championship.dto.ChampionshipModel;
-import it.esinware.championship.service.ChampionshipService;
+import it.esinware.championship.service.GiornataService;
 
-@RestController
-@RequestMapping(path = "championship")
-public class ChampionshipController {
 
+@SuppressWarnings("unused")
+public class GiornataController {
+	
 	@Autowired
-	private ChampionshipService service;
+	private GiornataService service;
 	
 	
 	@GetMapping(path = "{id}")
-	public ResponseEntity<ChampionshipModel> loadChampionship(@PathVariable Long id) {
-		return ResponseEntity.ok(service.loadCampionato(id));
+	public ResponseEntity<ChampionshipModel> loadGiornata(@PathVariable Long id) {
+		return ResponseEntity.ok(service.loadGiornata(id));
 	}
-	
-	public ResponseEntity<ChampionshipModel> deleteChampionship(@PathVariable Long id) {
-		return ResponseEntity.ok(service.deleteCampionato(id));
-	}
-	
-	
-	
-	
+
 }
