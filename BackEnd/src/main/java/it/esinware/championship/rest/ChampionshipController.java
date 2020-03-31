@@ -16,6 +16,7 @@ public class ChampionshipController {
 	@Autowired
 	private ChampionshipService service;
 	
+	
 	@GetMapping(path = "{id}")
 	public ResponseEntity<ChampionshipModel> loadChampionship(@PathVariable Long id) {
 		return ResponseEntity.ok(service.loadCampionato(id));

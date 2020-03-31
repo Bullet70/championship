@@ -12,6 +12,7 @@ public class ChampionshipService {
 	@Autowired
 	private ChampionshipRepository repos;
 	
+	
 	public ChampionshipModel loadCampionato(Long id) {
 		ChampionshipModel model = new ChampionshipModel();
 		Campionato campionato = repos.getOne(id);
@@ -21,29 +22,12 @@ public class ChampionshipService {
 	
 	public ChampionshipModel removeOne(Long id) {
 		ChampionshipModel model= new ChampionshipModel();
-		Campionato campionato = repos.deleteByld(id);
+		Campionato campionato = repos.deleteById(id);;
 	}
 	
-	public ChampionshipModel loadPartita(Long id) {
-		ChampionshipModel model = new ChampionshipModel();
-		Partita partita = repos.getOne(id);
-		//TODO Implement mapping from entity to view model
-		return model;
-	}
 	
-	public ChampionshipModel loadSquadra(Long id) {
-		ChampionshipModel model = new ChampionshipModel();
-		Squadra squadra= repos.getOne(id);
-		//TODO Implement mapping from entity to view model
-		return model;
-	}
 	
-	public ChampionshipModel loadGiornata(Long id) {
-		ChampionshipModel model = new ChampionshipModel();
-		Giornata giornata= repos.getOne(id);
-		//TODO Implement mapping from entity to view model
-		return model;
-	}
+	
 	
 	
 }
