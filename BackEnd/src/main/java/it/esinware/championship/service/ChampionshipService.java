@@ -9,6 +9,7 @@ import it.esinware.championship.persistence.ChampionshipRepository;
 @Service
 public class ChampionshipService {
 
+	private static final Object  = null;
 	@Autowired
 	private ChampionshipRepository repos;
 	
@@ -20,10 +21,16 @@ public class ChampionshipService {
 		return model;
 	}
 	
-	public ChampionshipModel removeOne(Long id) {
+	public void deleteByIdCampionato(Long id) {
 		ChampionshipModel model= new ChampionshipModel();
-		Campionato campionato = repos.deleteById(id);
+		Campionato campionato = repos.getOne(id);
 
+	}
+	
+	public ChampionshipModel saveCampionato(Long id){
+		ChampionshipModel model= new ChampionshipModel();
+		Campionato campionato=repos.getOne(id);
+		return model;
 	}
 	
 	
