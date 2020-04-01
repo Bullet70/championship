@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 import it.esinware.championship.domain.Partita;
 
 
-@SuppressWarnings("unused")
+@Repository
 public interface PartitaRepository extends JpaRepository<Partita, Long>  {
 }

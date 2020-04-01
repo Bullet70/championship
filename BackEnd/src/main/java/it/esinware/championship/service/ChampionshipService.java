@@ -22,7 +22,8 @@ public class ChampionshipService {
 	
 	public ChampionshipModel removeOne(Long id) {
 		ChampionshipModel model= new ChampionshipModel();
-		Campionato campionato = repos.deleteById(id);;
+		Campionato campionato = repos.deleteById(id);
+
 	}
 	
 	
