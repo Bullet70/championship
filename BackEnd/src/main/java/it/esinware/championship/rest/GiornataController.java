@@ -22,5 +22,11 @@ public class GiornataController {
 	public ResponseEntity<GiornataModel> loadGiornata(@PathVariable Long id) {
 		return ResponseEntity.ok(service.loadGiornata(id));
 	}
+	
+	public ResponseEntity<GiornataModel> saveGiornata(@PathVariable Long id) {
+		return ResponseEntity.ok(service.saveGiornata(id));
+	}
+	
+	
 
 }

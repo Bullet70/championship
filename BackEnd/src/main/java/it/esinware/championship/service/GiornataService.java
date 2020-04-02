@@ -18,5 +18,11 @@ public class GiornataService {
 		Giornata giornata= repos.getOne(id);
 		return model;
 	}
+	
+	public GiornataModel saveGiornata(Long id){
+		GiornataModel model= new GiornataModel();
+		Giornata giornata=repos.getOne(id);
+		return model;
+	}
 
 }

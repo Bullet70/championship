@@ -22,5 +22,11 @@ public class PartitaService {
 		
 	}
 	
+	public PartitaModel savePartita(Long id){
+		PartitaModel model= new PartitaModel();
+		Partita partita=repos.getOne(id);
+		return model;
+	}
+	
 
 }

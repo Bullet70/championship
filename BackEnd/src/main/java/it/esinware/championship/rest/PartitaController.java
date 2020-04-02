@@ -23,4 +23,7 @@ public class PartitaController {
 		return ResponseEntity.ok(service.loadPartita(id));
 	}
 
+	public ResponseEntity<PartitaModel> savePartita(@PathVariable Long id) {
+		return ResponseEntity.ok(service.savePartita(id));
+	}
 }

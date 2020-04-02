@@ -21,4 +21,8 @@ public class SquadraController {
 	public ResponseEntity<SquadraModel> loadSquadra(@PathVariable Long id) {
 		return ResponseEntity.ok(service.loadSquadra(id));
 	}
+	
+	public ResponseEntity<SquadraModel> saveSquadra(@PathVariable Long id) {
+		return ResponseEntity.ok(service.saveSquadra(id));
+	}
 }

@@ -17,4 +17,10 @@ public class SquadraService {
 		Squadra squadra= repos.getOne(id);
 		return model;
 	}
+	
+	public SquadraModel saveSquadra(Long id){
+		SquadraModel model= new SquadraModel();
+		Squadra squadra=repos.getOne(id);
+		return model;
+	}
 }
