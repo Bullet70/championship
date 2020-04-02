@@ -6,12 +6,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import it.esinware.championship.dto.ChampionshipModel;
+import it.esinware.championship.dto.GiornataModel;
 import it.esinware.championship.service.GiornataService;
 
 
-@SuppressWarnings("unused")
+@RestController
+@RequestMapping
 public class GiornataController {
 	
 	@Autowired
@@ -19,7 +19,7 @@ public class GiornataController {
 	
 	
 	@GetMapping(path = "{id}")
-	public ResponseEntity<ChampionshipModel> loadGiornata(@PathVariable Long id) {
+	public ResponseEntity<GiornataModel> loadGiornata(@PathVariable Long id) {
 		return ResponseEntity.ok(service.loadGiornata(id));
 	}
 
