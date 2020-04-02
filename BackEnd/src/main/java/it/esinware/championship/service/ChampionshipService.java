@@ -9,7 +9,7 @@ import it.esinware.championship.persistence.ChampionshipRepository;
 @Service
 public class ChampionshipService {
 
-	private static final Object  = null;
+	
 	@Autowired
 	private ChampionshipRepository repos;
 	
