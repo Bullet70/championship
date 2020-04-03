@@ -15,6 +15,7 @@ public class SquadraService {
 	public SquadraModel loadSquadra(Long id) {
 		SquadraModel model = new SquadraModel();
 		Squadra squadra= repos.getOne(id);
+		model.setDescription(squadra.getName());
 		return model;
 	}
 	
