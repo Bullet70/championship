@@ -16,10 +16,10 @@ public class GiornataModel  implements Serializable{
 	private SortedSet<Partita> games;
 	
 	
-	public void addGame(Partita gameModel) {
+	public void addGame(Partita game) {
 		if(games == null)
 			games= new TreeSet<>();
-		if(!games.contains(gameModel))
-			games.add(gameModel);
+		if(!games.contains(game))
+			games.add(game);
 	}
 }
