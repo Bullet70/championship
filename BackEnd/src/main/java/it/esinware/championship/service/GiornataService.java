@@ -16,6 +16,12 @@ public class GiornataService {
 	public GiornataModel loadGiornata(Long id) {
 		GiornataModel model = new GiornataModel();
 		Giornata giornata= repos.getOne(id);
+		model.setDescription(giornata.getDay().getDay());
+		giornata.getPartite().forEach( game-> {
+			PartitaModel gameModel = new PartitaModel();
+			gameModel.setGame(game.getGame());
+			model.addGame(gameModel);
+		});
 		return model;
 	}
 	

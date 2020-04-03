@@ -18,7 +18,7 @@ public class Giornata {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date day;
 	@OneToMany
-	@OrderBy("")
+	@OrderBy("game")
 	private SortedSet<Partita> partite;
 	private Integer numberRound;
 }

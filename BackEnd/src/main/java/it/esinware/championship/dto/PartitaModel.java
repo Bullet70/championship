@@ -5,5 +5,8 @@ import java.io.Serializable;
 public class PartitaModel implements Serializable{
 
 	private static final long serialVersionUID = 4364972170687145136L;
+	
+	private String description;
+	private Integer partita;
 
 }
