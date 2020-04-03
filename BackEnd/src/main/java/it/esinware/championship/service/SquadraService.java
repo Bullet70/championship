@@ -12,12 +12,13 @@ public class SquadraService {
 	@Autowired
 	private SquadraRepository repos;
 	
+	
 	public SquadraModel loadSquadra(Long id) {
 		SquadraModel model = new SquadraModel();
-		Squadra squadra= repos.getOne(id);
-		model.setDescription(squadra.getName());
+		Squadra squadra = repos.getOne(id);
 		return model;
 	}
+		
 	
 	public SquadraModel saveSquadra(Long id){
 		SquadraModel model= new SquadraModel();

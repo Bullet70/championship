@@ -2,7 +2,7 @@ package it.esinware.championship.dto;
 
 import java.io.Serializable;
 import java.util.Set;
-
+import java.util.TreeSet;
 import it.esinware.championship.domain.Player;
 
 public class SquadraModel implements Serializable {
@@ -12,15 +12,21 @@ public class SquadraModel implements Serializable {
 	private String description;
 	private Set<Player> players;
 	
-	public void addPlayer () {
+	public void addPlayer (SquadraModel player) {
+		if(players == null)
+			players = new TreeSet<>();
+		if(!players.contains(player))
+			players.add(player);
 		// TODO Auto-generated method stub
 		
 	}
 
-	
+
 		
 
-	
-	
 
+	
+	
+	
+	
 }

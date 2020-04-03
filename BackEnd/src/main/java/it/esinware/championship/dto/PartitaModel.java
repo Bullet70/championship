@@ -13,9 +13,6 @@ public class PartitaModel implements Serializable{
 	private Integer game;
 	private SortedSet<Score> minute;
 	
-	public void addScore(ScoreModel minute) {
-	
-	}
 
 	public Integer getGame() {
 		return game;
@@ -27,6 +24,11 @@ public class PartitaModel implements Serializable{
 
 	
 		
-	
+	public void addScore(PartitaModel score) {
+		if( score== null)
+		if(!score.contains(score))
+			score.add(score);
+	}
+
 	
 }
