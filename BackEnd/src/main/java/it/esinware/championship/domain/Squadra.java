@@ -4,6 +4,8 @@ import java.util.Set;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderBy;
+
 import lombok.Data;
 
 @Data
@@ -14,5 +16,6 @@ public class Squadra {
 	private Long id;
 	private String name;
 	@OneToMany
+	@OrderBy("players")
 	private Set<Player> players;
 }

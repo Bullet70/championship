@@ -12,7 +12,7 @@ public class SquadraModel implements Serializable {
 	private String description;
 	private Set<Player> players;
 	
-	public void addPlayer (SquadraModel player) {
+	public void addPlayer (PlayerModel player) {
 		if(players == null)
 			players = new TreeSet<>();
 		if(!players.contains(player))
