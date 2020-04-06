@@ -6,24 +6,25 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import it.esinware.championship.dto.PartitaModel;
-import it.esinware.championship.service.PartitaService;
+
+import it.esinware.championship.dto.ScoreModel;
+import it.esinware.championship.service.ScoreService;
 
 
 @RestController
 @RequestMapping
-public class PartitaController {
+public class ScoreController {
 	
 	@Autowired
-	private PartitaService service;
-	
-	
+	private ScoreService service;
+
 	@GetMapping(path = "{id}")
-	public ResponseEntity<PartitaModel> loadPartita(@PathVariable Long id) {
-		return ResponseEntity.ok(service.loadPartita(id));
+	public ResponseEntity<ScoreModel> loadScore(@PathVariable Long id) {
+		return ResponseEntity.ok(service.loadScore(id));
+	}
+	
+	public ResponseEntity<ScoreModel> saveScore(@PathVariable Long id) {
+		return ResponseEntity.ok(service.saveScore(id));
 	}
 
-	public ResponseEntity<PartitaModel> savePartita(@PathVariable Long id) {
-		return ResponseEntity.ok(service.savePartita(id));
-	}
 }
