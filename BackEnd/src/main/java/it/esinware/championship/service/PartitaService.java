@@ -19,6 +19,7 @@ public class PartitaService {
 		PartitaModel model = new PartitaModel();
 		Partita partita = repos.getOne(id);
 		return model;
+		model.setDescription(partita.getHomeTeam().getTeam() + "/" + partita.getGuestTeam().getTeam());
 		
 	}
 	

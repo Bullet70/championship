@@ -1,8 +1,6 @@
 package it.esinware.championship.domain;
 
 import java.util.SortedSet;
-import java.util.TreeSet;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
@@ -20,6 +18,8 @@ public class Partita {
 	@OneToMany
 	@OrderBy("minute")
 	private SortedSet<Score> score;
+	@OrderBy("team")
+	private SortedSet<Squadra> squadra;
 	private Integer game;
 	
 }
