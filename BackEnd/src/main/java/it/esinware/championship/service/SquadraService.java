@@ -2,7 +2,10 @@ package it.esinware.championship.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import it.esinware.championship.domain.Player;
 import it.esinware.championship.domain.Squadra;
+import it.esinware.championship.dto.GiornataModel;
 import it.esinware.championship.dto.PartitaModel;
 import it.esinware.championship.dto.SquadraModel;
 import it.esinware.championship.persistence.SquadraRepository;
@@ -17,13 +20,14 @@ public class SquadraService {
 	public SquadraModel loadSquadra(Long id) {
 		SquadraModel model = new SquadraModel();
 		Squadra squadra = repos.getOne(id);
-		return model;
 		model.setDescription(squadra.getName().getName());
-		squadra.getPlayers().forEach( players-> {
+		squadra.getPlayers().forEach(players -> {
 			SquadraModel playerModel = new SquadraModel();
-			player.setPlayer(player.getPlayer());
+			playerModel.setName(player.getSurname());
 			model.addPlayer(playerModel);
 		});
+		
+		return model;
 	}
 		
 	
