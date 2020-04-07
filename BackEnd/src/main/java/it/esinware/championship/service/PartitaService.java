@@ -22,7 +22,7 @@ public class PartitaService {
 		model.setDescription(partita.getHomeTeam().getName() + "/" + partita.getGuestTeam().getName());
 		partita.getScore().forEach(minute -> {
 			PartitaModel scoreModel = new PartitaModel();
-			scoreModel.setMinute(score.getMinute());
+			scoreModel.setMinute(scoreModel.getMinute());
 			model.addScore(scoreModel);
 		});
 		
