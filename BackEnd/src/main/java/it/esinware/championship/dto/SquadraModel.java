@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.util.Set;
 import java.util.TreeSet;
 import it.esinware.championship.domain.Player;
-import lombok.Data;
 
 @Data
 public class SquadraModel implements Serializable {
