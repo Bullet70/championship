@@ -13,7 +13,8 @@ public class PartitaModel implements Serializable{
 	private String description;
 	private SquadraModel homeTeam;
 	private SquadraModel guestTeam;
-	private Integer minute; 
+	private Integer minute;
+	private Integer game;
 	private SortedSet<PartitaModel>scores;
 	
 	

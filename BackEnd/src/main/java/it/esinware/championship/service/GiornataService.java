@@ -20,8 +20,11 @@ public class GiornataService {
 		model.setDescription(giornata.getDay().getDay());
 		giornata.getPartita().forEach( game-> {
 			PartitaModel gameModel = new PartitaModel();
-			game.setGame(game.getGame());
-			model.addGame(gameModel);
+			gameModel.getHomeTeam();
+			gameModel.getGuestTeam();
+			model.addGame(game);
+		
+			
 		});
 		return model;
 	}
