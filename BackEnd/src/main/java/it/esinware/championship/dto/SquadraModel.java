@@ -4,7 +4,9 @@ import java.io.Serializable;
 import java.util.Set;
 import java.util.TreeSet;
 import it.esinware.championship.domain.Player;
+import lombok.Data;
 
+@Data
 public class SquadraModel implements Serializable {
 
 	private static final long serialVersionUID = 6054800629275827590L;
