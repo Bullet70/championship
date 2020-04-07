@@ -12,8 +12,8 @@ public class SquadraModel implements Serializable {
 	private static final long serialVersionUID = 6054800629275827590L;
 	
 	private String description;
-	private PlayerModel Name;
-	private PlayerModel surname;
+	private Player Name;
+	private Player surname;
 	private Set<Player> players;
 	
 	public void addPlayer (PlayerModel player) {
@@ -21,7 +21,6 @@ public class SquadraModel implements Serializable {
 			players = new TreeSet<>();
 		if(!players.contains(player))
 			players.add(player);
-		// TODO Auto-generated method stub
 		
 	}
 

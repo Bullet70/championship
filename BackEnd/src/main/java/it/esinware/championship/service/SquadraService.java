@@ -21,11 +21,7 @@ public class SquadraService {
 		SquadraModel model = new SquadraModel();
 		Squadra squadra = repos.getOne(id);
 		model.setDescription(squadra.getName().getName());
-		squadra.getPlayers().forEach(players -> {
-			SquadraModel playerModel = new SquadraModel();
-			playerModel.setName(player.getSurname());
-			model.addPlayer(playerModel);
-		});
+		
 		
 		return model;
 	}
