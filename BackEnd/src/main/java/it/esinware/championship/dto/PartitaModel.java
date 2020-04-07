@@ -11,22 +11,11 @@ public class PartitaModel implements Serializable{
 	private static final long serialVersionUID = 4364972170687145136L;
 	
 	private String description;
+	private SquadraModel homeTeam;
+	private SquadraModel guestTeam;
 	private SortedSet<PartitaModel> team;
 	private SortedSet<PartitaModel>scores;
 	
-	public void addhomeTeam(PartitaModel homeTeam) {
-		if(team == null)
-			team = new TreeSet<>();
-		if(!team.contains(homeTeam))
-			team.add(homeTeam);
-	}
-	
-	public void addGuestTeam(PartitaModel guestTeam) {
-		if(team == null)
-			team = new TreeSet<>();
-		if(!team.contains(guestTeam))
-			team.add(guestTeam);
-	}
 	
 	public void addScore(PartitaModel score) {
 		if(scores == null)
@@ -36,10 +25,5 @@ public class PartitaModel implements Serializable{
 	}
 
 
-	
-	
-
-	
-		
 	
 }

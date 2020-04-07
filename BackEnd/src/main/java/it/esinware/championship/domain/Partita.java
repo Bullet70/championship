@@ -21,8 +21,6 @@ public class Partita {
 	@OneToMany
 	@OrderBy("minute")
 	private SortedSet<Score> score;
-	private SortedSet<Squadra> team;
-	
 	private Integer game;
 	
 }
