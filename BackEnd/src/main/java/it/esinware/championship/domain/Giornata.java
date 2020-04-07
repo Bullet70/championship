@@ -19,6 +19,6 @@ public class Giornata {
 	private Date day;
 	@OneToMany
 	@OrderBy("game")
-	private SortedSet<Partita> partite;
+	private SortedSet<Partita> partita;
 	private Integer numberRound;
 }

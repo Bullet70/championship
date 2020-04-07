@@ -13,6 +13,7 @@ public class GiornataModel  implements Serializable{
 	
 	private int description;
 	private Integer roundNumber;
+	private Integer game;
 	private SortedSet<Partita> games;
 	
 	

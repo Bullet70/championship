@@ -12,7 +12,8 @@ public class SquadraModel implements Serializable {
 	private static final long serialVersionUID = 6054800629275827590L;
 	
 	private String description;
-	private String Name;
+	private PlayerModel Name;
+	private PlayerModel surname;
 	private Set<Player> players;
 	
 	public void addPlayer (PlayerModel player) {

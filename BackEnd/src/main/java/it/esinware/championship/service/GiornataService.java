@@ -18,7 +18,7 @@ public class GiornataService {
 		GiornataModel model = new GiornataModel();
 		Giornata giornata= repos.getOne(id);
 		model.setDescription(giornata.getDay().getDay());
-		giornata.getPartite().forEach( game-> {
+		giornata.getPartita().forEach( game-> {
 			PartitaModel gameModel = new PartitaModel();
 			game.setGame(game.getGame());
 			model.addGame(gameModel);
