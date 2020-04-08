@@ -31,6 +31,12 @@ public class PartitaService {
 	public PartitaModel savePartita(Long id){
 		PartitaModel model= new PartitaModel();
 		Partita partita = repos.getOne(id);
+		model.setDescription(partita.getHomeTeam().getName() + "/" + partita.getGuestTeam().getName());
+		partita.getScore().forEach(minute -> {
+			PartitaModel scoreModel = new PartitaModel();
+			scoreModel.setMinute(scoreModel.getMinute());
+			model.addScore(scoreModel);
+		});
 		return model;
 	}
 	

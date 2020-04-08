@@ -27,16 +27,25 @@ public class ChampionshipService {
 		return model;
 	}
 	
-	public void deleteByIdCampionato(Long id) {
-		ChampionshipModel model= new ChampionshipModel();
-		Campionato campionato = repos.getOne(id);
-
-	}
 	
 	public ChampionshipModel saveCampionato(Long id){
 		ChampionshipModel model= new ChampionshipModel();
 		Campionato campionato=repos.getOne(id);
+		model.setDescription(campionato.getStartYear().getYear() + "/" + campionato.getEndYear().getYear());
+		campionato.getFixtures().forEach(round -> {
+			GiornataModel roundModel = new GiornataModel();
+			roundModel.setRoundNumber(round.getNumberRound());
+			model.addRound(roundModel);
+		});
+		
 		return model;
+	}
+	
+	
+	public void deleteByIdCampionato(Long id) {
+		ChampionshipModel model= new ChampionshipModel();
+		Campionato campionato = repos.getOne(id);
+
 	}
 	
 	

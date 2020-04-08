@@ -32,6 +32,13 @@ public class SquadraService {
 	public SquadraModel saveSquadra (Long id){
 		SquadraModel model= new SquadraModel();
 		Squadra squadra=repos.getOne(id);
+		model.setDescription(squadra.getName());
+		squadra.getPlayers().forEach( player -> {
+			SquadraModel playerModel = new SquadraModel();
+				playerModel.setName(playerModel.getName());
+				playerModel.setSurname(playerModel.getSurname());
+				model.addPlayer(playerModel);
+			});
 		return model;
 	}
 }
