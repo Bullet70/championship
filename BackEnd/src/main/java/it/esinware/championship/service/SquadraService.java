@@ -10,12 +10,12 @@ import it.esinware.championship.persistence.SquadraRepository;
 public class SquadraService {
 	
 	@Autowired
-	private SquadraRepository repos;
+	private SquadraRepository reposSquadra;
 	
 	
 	public SquadraModel loadSquadra(Long id) {
 		SquadraModel model = new SquadraModel();
-		Squadra squadra = repos.getOne(id);
+		Squadra squadra = reposSquadra.getOne(id);
 		model.setDescription(squadra.getName());
 		squadra.getPlayers().forEach( player -> {
 			SquadraModel playerModel = new SquadraModel();
@@ -31,7 +31,7 @@ public class SquadraService {
 	
 	public SquadraModel saveSquadra (Long id){
 		SquadraModel model= new SquadraModel();
-		Squadra squadra=repos.getOne(id);
+		Squadra squadra=reposSquadra.getOne(id);
 		model.setDescription(squadra.getName());
 		squadra.getPlayers().forEach( player -> {
 			SquadraModel playerModel = new SquadraModel();
@@ -40,5 +40,9 @@ public class SquadraService {
 				model.addPlayer(playerModel);
 			});
 		return model;
+	}
+	
+	public void deleteSquadra(Long id ) {
+		reposSquadra.deleteById(id);
 	}
 }

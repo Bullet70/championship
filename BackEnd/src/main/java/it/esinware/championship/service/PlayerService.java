@@ -10,19 +10,23 @@ import it.esinware.championship.persistence.PlayerRepository;
 public class PlayerService {
 	
 	@Autowired
-	private PlayerRepository repos;
+	private PlayerRepository reposPlayer;
 
 	public PlayerModel loadPlayer(Long id) {
 		PlayerModel model = new PlayerModel();
-		Player player = repos.getOne(id);
+		Player player = reposPlayer.getOne(id);
 		return model;
 		
 	}
 	
 	public PlayerModel savePlayer(Long id){
 		PlayerModel model= new PlayerModel();
-		Player player=repos.getOne(id);
+		Player player=reposPlayer.getOne(id);
 		return model;
+	}
+	
+	public void deletePlayer(Long id ) {
+		reposPlayer.deleteById(id);
 	}
 
 }

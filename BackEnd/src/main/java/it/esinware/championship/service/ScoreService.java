@@ -8,19 +8,23 @@ import it.esinware.championship.persistence.ScoreRepository;
 public class ScoreService {
 	
 	@Autowired
-	private ScoreRepository repos;
+	private ScoreRepository reposScore;
 
 	public ScoreModel loadScore(Long id) {
 		ScoreModel model = new ScoreModel();
-		Score score = repos.getOne(id);
+		Score score = reposScore.getOne(id);
 		return model;
 		
 	}
 	
 	public ScoreModel saveScore(Long id){
 		ScoreModel model= new ScoreModel();
-		Score score=repos.getOne(id);
+		Score score=reposScore.getOne(id);
 		return model;
+	}
+	
+	public void deleteScore(Long id ) {
+		reposScore.deleteById(id);
 	}
 	
 
