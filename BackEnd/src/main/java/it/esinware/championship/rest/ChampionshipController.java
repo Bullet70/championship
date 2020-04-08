@@ -22,12 +22,14 @@ public class ChampionshipController {
 		return ResponseEntity.ok(service.loadCampionato(id));
 	}
 	
-	public ResponseEntity<ChampionshipModel> deleteByIdChampionship(Long id) {
-		return ResponseEntity.ok(service.deleteByIdCampionato(id));
-	}
 	
 	public ResponseEntity<ChampionshipModel> saveChampionship(@PathVariable Long id) {
 		return ResponseEntity.ok(service.saveCampionato(id));
+	}
+	
+	public void deleteByIdCampionato(@PathVariable Long id) {
+		service.deleteCampionato(id);
+		
 	}
 	
 	

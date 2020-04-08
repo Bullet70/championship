@@ -26,5 +26,11 @@ public class PlayerController {
 	public ResponseEntity<PlayerModel> savePlayer(@PathVariable Long id) {
 		return ResponseEntity.ok(service.savePlayer(id));
 	}
+	
+	public void deleteByIdPlayer(@PathVariable Long id) {
+		service.deletePlayer(id);
+		
+	}
+	
 
 }

@@ -27,6 +27,12 @@ public class GiornataController {
 		return ResponseEntity.ok(service.saveGiornata(id));
 	}
 	
+	public void deleteByIdGiornata(@PathVariable Long id) {
+		service.deleteGiornata(id);
+		
+	}
+	
+	
 	
 
 }

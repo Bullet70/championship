@@ -25,4 +25,9 @@ public class SquadraController {
 	public ResponseEntity<SquadraModel> saveSquadra(@PathVariable Long id) {
 		return ResponseEntity.ok(service.saveSquadra(id));
 	}
+	
+	public void deleteByIdSquadra(@PathVariable Long id) {
+		service.deleteSquadra(id);
+		}
+	
 }

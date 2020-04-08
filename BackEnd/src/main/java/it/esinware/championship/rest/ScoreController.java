@@ -27,4 +27,9 @@ public class ScoreController {
 		return ResponseEntity.ok(service.saveScore(id));
 	}
 
+	public void deleteByIdScore(@PathVariable Long id) {
+		service.deleteScore(id);
+		
+	}
+	
 }
