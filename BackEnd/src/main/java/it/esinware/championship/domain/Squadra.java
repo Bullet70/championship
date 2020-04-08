@@ -16,6 +16,6 @@ public class Squadra {
 	private Long id;
 	private String name;
 	@OneToMany
-	@OrderBy("players")
+	@OrderBy("player")
 	private Set<Player> players;
 }

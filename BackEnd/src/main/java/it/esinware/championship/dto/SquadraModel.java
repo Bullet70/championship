@@ -12,17 +12,19 @@ public class SquadraModel implements Serializable {
 	private static final long serialVersionUID = 6054800629275827590L;
 	
 	private String description;
-	private Player Name;
-	private Player surname;
+	private String Name;
+	private String Surname;
 	private Set<Player> players;
 	
-	public void addPlayer (PlayerModel player) {
+	public void addPlayer (SquadraModel player) {
 		if(players == null)
 			players = new TreeSet<>();
 		if(!players.contains(player))
-			players.add(player);
+			players.addAll(getPlayers());
 		
 	}
+
+	
 
 
 		

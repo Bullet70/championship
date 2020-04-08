@@ -5,8 +5,7 @@ import org.springframework.stereotype.Service;
 
 import it.esinware.championship.domain.Player;
 import it.esinware.championship.domain.Squadra;
-import it.esinware.championship.dto.GiornataModel;
-import it.esinware.championship.dto.PartitaModel;
+import it.esinware.championship.dto.PlayerModel;
 import it.esinware.championship.dto.SquadraModel;
 import it.esinware.championship.persistence.SquadraRepository;
 
@@ -20,7 +19,15 @@ public class SquadraService {
 	public SquadraModel loadSquadra(Long id) {
 		SquadraModel model = new SquadraModel();
 		Squadra squadra = repos.getOne(id);
-		model.setDescription(squadra.getName().getName());
+		model.setDescription(squadra.getName());
+		squadra.getPlayers().forEach( player -> {
+			SquadraModel playerModel = new SquadraModel();
+			playerModel.setName(player.getName());
+			playerModel.setSurname(player.getSurname());
+			playerModel.addAll(player);;
+		
+		
+		});
 		
 		
 		return model;
