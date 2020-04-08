@@ -13,11 +13,11 @@ import it.esinware.championship.persistence.PartitaRepository;
 public class PartitaService {
 	
 	@Autowired
-	private PartitaRepository repos;
+	private PartitaRepository reposPartita;
 
 	public PartitaModel loadPartita(Long id) {
 		PartitaModel model = new PartitaModel();
-		Partita partita = repos.getOne(id);
+		Partita partita = reposPartita.getOne(id);
 		model.setDescription(partita.getHomeTeam().getName() + "/" + partita.getGuestTeam().getName());
 		partita.getScore().forEach(minute -> {
 			PartitaModel scoreModel = new PartitaModel();
@@ -30,7 +30,7 @@ public class PartitaService {
 	
 	public PartitaModel savePartita(Long id){
 		PartitaModel model= new PartitaModel();
-		Partita partita = repos.getOne(id);
+		Partita partita = reposPartita.getOne(id);
 		model.setDescription(partita.getHomeTeam().getName() + "/" + partita.getGuestTeam().getName());
 		partita.getScore().forEach(minute -> {
 			PartitaModel scoreModel = new PartitaModel();
@@ -40,5 +40,8 @@ public class PartitaService {
 		return model;
 	}
 	
+	public void deletePartita(Long id ) {
+		reposPartita.deleteById(id);
+	}
 
 }

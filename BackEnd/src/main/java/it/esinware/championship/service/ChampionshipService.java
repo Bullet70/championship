@@ -12,12 +12,12 @@ public class ChampionshipService {
 
 	
 	@Autowired
-	private ChampionshipRepository repos;
+	private ChampionshipRepository reposCampionato;
 	
 	
 	public ChampionshipModel loadCampionato(Long id) {
 		ChampionshipModel model = new ChampionshipModel();
-		Campionato campionato = repos.getOne(id);
+		Campionato campionato = reposCampionato.getOne(id);
 		model.setDescription(campionato.getStartYear().getYear() + "/" + campionato.getEndYear().getYear());
 		campionato.getFixtures().forEach(round -> {
 			GiornataModel roundModel = new GiornataModel();
@@ -30,7 +30,7 @@ public class ChampionshipService {
 	
 	public ChampionshipModel saveCampionato(Long id){
 		ChampionshipModel model= new ChampionshipModel();
-		Campionato campionato=repos.getOne(id);
+		Campionato campionato=reposCampionato.getOne(id);
 		model.setDescription(campionato.getStartYear().getYear() + "/" + campionato.getEndYear().getYear());
 		campionato.getFixtures().forEach(round -> {
 			GiornataModel roundModel = new GiornataModel();
@@ -41,12 +41,10 @@ public class ChampionshipService {
 		return model;
 	}
 	
-	
-	public void deleteByIdCampionato(Long id) {
-		ChampionshipModel model= new ChampionshipModel();
-		Campionato campionato = repos.getOne(id);
-
+	public void deleteCampionato(Long id ) {
+		reposCampionato.deleteById(id);
 	}
+	
 	
 	
 	
