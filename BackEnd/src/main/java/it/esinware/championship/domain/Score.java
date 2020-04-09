@@ -13,4 +13,11 @@ public class Score {
 	private Player player;
 	private Integer minute;
 	private boolean ownGol;
+	
+	protected Score () {}
+	
+	 public Score(Player player, boolean ownGol) {
+		    this.player = player;
+		    this.ownGol = ownGol;
+		  }
 }

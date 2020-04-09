@@ -12,4 +12,13 @@ public class Player {
 	private Long id;
 	private String surname;
 	private String name;
+	
+	protected Player () {}
+	
+	 public Player(String surname, String name) {
+		    this.surname = surname;
+		    this.name = name;
+		  }
+	
+	
 }
