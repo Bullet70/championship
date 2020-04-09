@@ -2,6 +2,8 @@ package it.esinware.championship.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import it.esinware.championship.domain.Campionato;
 import it.esinware.championship.dto.ChampionshipModel;
 import it.esinware.championship.dto.GiornataModel;
@@ -28,6 +30,7 @@ public class ChampionshipService {
 	}
 	
 	
+	
 	public ChampionshipModel saveCampionato(Long id){
 		ChampionshipModel model= new ChampionshipModel();
 		Campionato campionato=reposCampionato.getOne(id);
@@ -44,8 +47,6 @@ public class ChampionshipService {
 	public void deleteCampionato(Long id ) {
 		reposCampionato.deleteById(id);
 	}
-	
-	
 	
 	
 	
