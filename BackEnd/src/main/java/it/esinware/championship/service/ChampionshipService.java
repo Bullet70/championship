@@ -1,9 +1,8 @@
 package it.esinware.championship.service;
 
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
 import it.esinware.championship.domain.Campionato;
 import it.esinware.championship.dto.ChampionshipModel;
 import it.esinware.championship.dto.GiornataModel;
@@ -49,7 +48,13 @@ public class ChampionshipService {
 	}
 	
 	
-	
+	public Optional <Campionato> findByIdCampionato(Long id) {
+
+        return reposCampionato.findById(id);
+    }
+
+
+
 	
 	
 }

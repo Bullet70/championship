@@ -1,7 +1,11 @@
 package it.esinware.championship.service;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import it.esinware.championship.domain.Giornata;
 import it.esinware.championship.domain.Squadra;
 import it.esinware.championship.dto.SquadraModel;
 import it.esinware.championship.persistence.SquadraRepository;
@@ -45,4 +49,9 @@ public class SquadraService {
 	public void deleteSquadra(Long id ) {
 		reposSquadra.deleteById(id);
 	}
+	
+	public Optional <Squadra> findByIdSquadra(Long id) {
+
+        return reposSquadra.findById(id);
+    }
 }
