@@ -1,11 +1,9 @@
 package it.esinware.championship.service;
 
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import it.esinware.championship.domain.Campionato;
 import it.esinware.championship.domain.Giornata;
-import it.esinware.championship.dto.ChampionshipModel;
 import it.esinware.championship.dto.GiornataModel;
 import it.esinware.championship.dto.PartitaModel;
 import it.esinware.championship.persistence.GiornataRepository;
@@ -49,4 +47,10 @@ public class GiornataService {
 	public void deleteGiornata(Long id ) {
 		reposGiornata.deleteById(id);
 	}
+	
+	public Optional <Giornata> findByIdGiornata(Long id) {
+
+        return reposGiornata.findById(id);
+    }
+	
 }

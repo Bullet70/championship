@@ -17,4 +17,11 @@ public class Score {
 	private boolean yellowCard;
 	private boolean redCard;
 	private boolean injured;
+	
+	protected Score () {}
+	
+	 public Score(Player player, boolean ownGol) {
+		    this.player = player;
+		    this.ownGol = ownGol;
+		  }
 }

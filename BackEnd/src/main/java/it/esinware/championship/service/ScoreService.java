@@ -1,5 +1,6 @@
 package it.esinware.championship.service;
 
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import it.esinware.championship.domain.Score;
 import it.esinware.championship.dto.ScoreModel;
@@ -26,6 +27,11 @@ public class ScoreService {
 	public void deleteScore(Long id ) {
 		reposScore.deleteById(id);
 	}
+	
+	public Optional <Score> findByIdScore(Long id) {
+
+        return reposScore.findById(id);
+    }
 	
 
 

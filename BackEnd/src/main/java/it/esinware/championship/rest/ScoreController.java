@@ -1,12 +1,13 @@
 package it.esinware.championship.rest;
 
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
+import it.esinware.championship.domain.Score;
 import it.esinware.championship.dto.ScoreModel;
 import it.esinware.championship.service.ScoreService;
 
@@ -30,6 +31,10 @@ public class ScoreController {
 	public void deleteByIdScore(@PathVariable Long id) {
 		service.deleteScore(id);
 		
+	}
+	
+	public ResponseEntity<Optional<Score>> findbyIdScore(@PathVariable Long id) {
+		return ResponseEntity.ok(service.findByIdScore(id));
 	}
 	
 }

@@ -1,5 +1,6 @@
 package it.esinware.championship.service;
 
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import it.esinware.championship.domain.Campionato;
@@ -28,6 +29,7 @@ public class ChampionshipService {
 	}
 	
 	
+	
 	public ChampionshipModel saveCampionato(Long id){
 		ChampionshipModel model= new ChampionshipModel();
 		Campionato campionato=reposCampionato.getOne(id);
@@ -46,9 +48,13 @@ public class ChampionshipService {
 	}
 	
 	
-	
-	
-	
+	public Optional <Campionato> findByIdCampionato(Long id) {
+
+        return reposCampionato.findById(id);
+    }
+
+
+
 	
 	
 }

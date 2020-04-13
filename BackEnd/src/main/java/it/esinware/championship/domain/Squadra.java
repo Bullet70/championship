@@ -18,4 +18,10 @@ public class Squadra {
 	@OneToMany
 	@OrderBy("player")
 	private Set<Player> players;
+	
+	protected Squadra () {}
+	
+	 public Squadra(String name) {
+		    this.name = name;
+		  }
 }

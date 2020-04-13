@@ -21,4 +21,10 @@ public class Giornata {
 	@OrderBy("game")
 	private SortedSet<Partita> partita;
 	private Integer numberRound;
+	
+	protected Giornata() {}
+	
+	 public Giornata(Date day) {
+		    this.day = day;
+		  }
 }

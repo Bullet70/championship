@@ -23,4 +23,12 @@ public class Campionato {
 	@OneToMany
 	@OrderBy("numberRound")
 	private SortedSet<Giornata> fixtures;
+	
+	protected Campionato() {}
+	
+	 public Campionato(Date startYear, Date endYear) {
+		    this.startYear = startYear;
+		    this.endYear = endYear;
+		  }
 }
+

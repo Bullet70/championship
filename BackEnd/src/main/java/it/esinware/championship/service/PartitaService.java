@@ -1,5 +1,6 @@
 package it.esinware.championship.service;
 
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import it.esinware.championship.domain.Partita;
@@ -44,4 +45,8 @@ public class PartitaService {
 		reposPartita.deleteById(id);
 	}
 
+	public Optional <Partita> findByIdPartita(Long id) {
+
+        return reposPartita.findById(id);
+    }
 }

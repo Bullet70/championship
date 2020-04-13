@@ -6,4 +6,5 @@ import it.esinware.championship.domain.Campionato;
 
 @Repository
 public interface ChampionshipRepository extends JpaRepository<Campionato, Long> {
-}
+	
+	}
