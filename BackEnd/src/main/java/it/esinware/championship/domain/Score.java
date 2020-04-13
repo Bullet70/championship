@@ -13,4 +13,8 @@ public class Score {
 	private Player player;
 	private Integer minute;
 	private boolean ownGol;
+	private boolean gol;
+	private boolean yellowCard;
+	private boolean redCard;
+	private boolean injured;
 }

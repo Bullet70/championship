@@ -23,4 +23,11 @@ public class Partita {
 	private SortedSet<Score> score;
 	private Integer game;
 	
+	protected Partita() {}
+	
+	 public Partita(Squadra homeTeam, Squadra guestTeam) {
+		    this.homeTeam = homeTeam;
+		    this.guestTeam = guestTeam;
+		  }
+	
 }
