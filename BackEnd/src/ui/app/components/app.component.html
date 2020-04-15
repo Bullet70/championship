@@ -1,5 +1,5 @@
 <div>
-	<h1>PAGINA DI PROVA</h1>
+	<h1>CAMPIONATI</h1>
 	<p-button (onClick)="bo()">Aggiungi</p-button>
 </div>
 <div>
@@ -30,3 +30,56 @@
 		</ng-template>
 	</p-table>
 </div>
+
+
+
+<div>
+	<h1>SQUADRE</h1>
+	<p-button (onClick)="bo()">Aggiungi</p-button>
+</div>
+<div>
+	<label>Nome Squadra</label>
+	<input type="text" [(ngModel)]="squadra.name" />
+</div>
+<div>
+	<p-table [value]="squadra">
+		<ng-template pTemplate="header">
+			<th>Nome</th>
+		</ng-template>
+		<ng-template pTemplate="body" let-row>
+			<tr class="tableRow">
+				<td>{{row.name}}</td>	
+			</tr>
+		</ng-template>
+	</p-table>
+</div>
+
+
+<div>
+	<h1>CALENDARIO</h1>
+	<p-button (onClick)="bo()">Aggiungi</p-button>
+</div>
+<div>
+	<label>Giornata</label>
+	<input type="text" [(ngModel)]="giornata.description" />
+</div>
+<div>
+	<label>Data</label>
+	<input type="text" [(ngModel)]="giornata.date" />
+</div>
+<div>
+	<p-table [value]="championships">
+		<ng-template pTemplate="header">
+			<th>Giornata</th>
+			<th>Data</th>
+		</ng-template>
+		<ng-template pTemplate="body" let-row>
+			<tr class="tableRow">
+				<td>{{row.description}}</td>
+				<td>{{row.date}}</td>	
+			</tr>
+		</ng-template>
+	</p-table>
+</div>
+
+

@@ -10,6 +10,8 @@ import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { AppComponent } from 'app/components/app.component';
 
+
+
 @NgModule({
   declarations: [
 		AppComponent
@@ -24,7 +26,8 @@ import { AppComponent } from 'app/components/app.component';
     ReactiveFormsModule,
 		DropdownModule,
 		ButtonModule,
-		TableModule
+		TableModule,
+		
   ],
   providers: [
 
