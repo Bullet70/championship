@@ -9,6 +9,9 @@ import { DropdownModule } from 'primeng/dropdown';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { AppComponent } from 'app/components/app.component';
+import {TabMenuModule} from 'primeng/tabmenu';
+import {MenuItem} from 'primeng/api';
+import {SplitButtonModule} from 'primeng/splitbutton';
 
 
 
@@ -27,6 +30,11 @@ import { AppComponent } from 'app/components/app.component';
 		DropdownModule,
 		ButtonModule,
 		TableModule,
+		TabMenuModule,
+		SplitButtonModule,
+		
+		
+		
 		
   ],
   providers: [
