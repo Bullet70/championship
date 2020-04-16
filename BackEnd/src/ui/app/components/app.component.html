@@ -3,6 +3,9 @@
 	<p-button (onClick)="bo()">Aggiungi</p-button>
 </div>
 <div>
+	<p-splitButton label="Salva" icon="pi pi-check" (onClick)="bo()" [model]="championship"></p-splitButton>
+</div>
+<div>
 	<label>Nome Campionato</label>
 	<input type="text" [(ngModel)]="championship.description" />
 </div>
