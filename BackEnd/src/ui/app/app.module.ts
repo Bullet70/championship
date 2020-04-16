@@ -8,16 +8,20 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DropdownModule } from 'primeng/dropdown';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
-import { AppComponent } from 'app/components/app.component';
+import { AppComponent } from 'app/app.component';
 import {TabMenuModule} from 'primeng/tabmenu';
-import {MenuItem} from 'primeng/api';
 import {SplitButtonModule} from 'primeng/splitbutton';
-
-
+import { MenuComponent } from 'app/components/menu.components';
+import { TeamComponent } from 'app/components/team/team.component';
+import { AppRoutingModule } from './app-routing.module';
+import { FixturesModule } from 'app/components/fixtures/fixtures.module';
+import { TeamService } from 'app/services/team.service';
 
 @NgModule({
   declarations: [
-		AppComponent
+		AppComponent,
+		MenuComponent,
+		TeamComponent
   ],
   imports: [
     BrowserModule,
@@ -32,13 +36,13 @@ import {SplitButtonModule} from 'primeng/splitbutton';
 		TableModule,
 		TabMenuModule,
 		SplitButtonModule,
-		
-		
+		AppRoutingModule,
+		FixturesModule
 		
 		
   ],
   providers: [
-
+		TeamService
 	],
   bootstrap: [AppComponent],
 	entryComponents: []

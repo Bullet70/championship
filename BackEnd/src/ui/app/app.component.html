@@ -1,10 +1,14 @@
+<app-menu></app-menu>
 <div>
 	<h1>CAMPIONATI</h1>
 	<p-button (onClick)="bo()">Aggiungi</p-button>
 </div>
 <div>
-	<p-splitButton label="Salva" icon="pi pi-check" (onClick)="bo()" [model]="championship"></p-splitButton>
+	<p-splitButton label="Salva" icon="pi pi-check" (onClick)="bo()"></p-splitButton>
 </div>
+
+<router-outlet></router-outlet>
+
 <div>
 	<label>Nome Campionato</label>
 	<input type="text" [(ngModel)]="championship.description" />
@@ -33,59 +37,6 @@
 		</ng-template>
 	</p-table>
 </div>
-
-
-
-
-<div>
-	<h1>SQUADRE</h1>
-	<p-button (onClick)="bo()">Aggiungi</p-button>
-</div>
-<div>
-	<label>Nome Squadra</label>
-	<input type="text" [(ngModel)]="squadra.name" />
-</div>
-<div>
-	<p-table [value]="squadre">
-		<ng-template pTemplate="header">
-			<th>Nome Squadra</th>
-		</ng-template>
-		<ng-template pTemplate="body" let-row>
-			<tr class="tableRow">
-				<td>{{row.name}}</td>	
-			</tr>
-		</ng-template>
-	</p-table>
-</div>
-
-
-<div>
-	<h1>CALENDARIO</h1>
-	<p-button (onClick)="bo()">Aggiungi</p-button>
-</div>
-<div>
-	<label>Giornata</label>
-	<input type="text" [(ngModel)]="giornata.description" />
-</div>
-<div>
-	<label>Data</label>
-	<input type="text" [(ngModel)]="giornata.date" />
-</div>
-<div>
-	<p-table [value]="giornate">
-		<ng-template pTemplate="header">
-			<th>Giornata</th>
-			<th>Data</th>
-		</ng-template>
-		<ng-template pTemplate="body" let-row>
-			<tr class="tableRow">
-				<td>{{row.description}}</td>
-				<td>{{row.date}}</td>	
-			</tr>
-		</ng-template>
-	</p-table>
-</div>
-
 
 <div>
 	<h1>GIOCATORI</h1>
@@ -120,8 +71,3 @@
 		</ng-template>
 	</p-table>
 </div>
-
-
-
-
-
