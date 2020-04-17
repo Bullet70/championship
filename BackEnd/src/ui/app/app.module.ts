@@ -17,6 +17,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { FixturesModule } from 'app/components/fixtures/fixtures.module';
 import { TeamService } from 'app/services/team.service';
 import { PlayerComponent } from 'app/components/player/player.component';
+import {CarouselModule} from 'primeng/carousel';
+
 
 
 @NgModule({
@@ -41,7 +43,8 @@ import { PlayerComponent } from 'app/components/player/player.component';
 		SplitButtonModule,
 		AppRoutingModule,
 		FixturesModule, 
-		Playermodule
+		Playermodule,
+		CarouselModule
 		
 		
   ],
