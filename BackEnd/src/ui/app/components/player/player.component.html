@@ -1,0 +1,33 @@
+<div>
+	<h1>MARCATORI</h1>
+	<p-button (onClick)="bo()">Aggiungi</p-button>
+</div>
+<div>
+	<label>Cognome</label>
+	<input type="text" [(ngModel)]="player.surname" />
+</div>
+<div>
+	<label>Nome</label>
+	<input type="text" [(ngModel)]="player.name" />
+</div>
+<div>
+	<label>Squadra</label>
+	<input type="text" [(ngModel)]="player.team" />
+</div>
+<div>
+	<p-table [value]="players">
+		<ng-template pTemplate="header">
+			<th>Cognome</th>
+			<th>Nome</th>
+			<th>Squadra</th>
+		</ng-template>
+		<ng-template pTemplate="body" let-row>
+			<tr class="tableRow">
+				<td>{{row.surname}}</td>
+				<td>{{row.name}}</td>
+				<td>{{row.team}}</td>
+					
+			</tr>
+		</ng-template>
+	</p-table>
+</div>

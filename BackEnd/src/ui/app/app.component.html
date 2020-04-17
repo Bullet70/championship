@@ -1,11 +1,5 @@
 <app-menu></app-menu>
-<div>
-	<h1>CAMPIONATI</h1>
-	<p-button (onClick)="bo()">Aggiungi</p-button>
-</div>
-<div>
-	<p-splitButton label="Salva" icon="pi pi-check" (onClick)="bo()"></p-splitButton>
-</div>
+
 
 <router-outlet></router-outlet>
 
@@ -38,36 +32,3 @@
 	</p-table>
 </div>
 
-<div>
-	<h1>GIOCATORI</h1>
-	<p-button (onClick)="bo()">Aggiungi</p-button>
-</div>
-<div>
-	<label>Cognome</label>
-	<input type="text" [(ngModel)]="player.surname" />
-</div>
-<div>
-	<label>Nome</label>
-	<input type="text" [(ngModel)]="player.name" />
-</div>
-<div>
-	<label>Squadra</label>
-	<input type="text" [(ngModel)]="player.team" />
-</div>
-<div>
-	<p-table [value]="players">
-		<ng-template pTemplate="header">
-			<th>Cognome</th>
-			<th>Nome</th>
-			<th>Squadra</th>
-		</ng-template>
-		<ng-template pTemplate="body" let-row>
-			<tr class="tableRow">
-				<td>{{row.surname}}</td>
-				<td>{{row.name}}</td>
-				<td>{{row.team}}</td>
-					
-			</tr>
-		</ng-template>
-	</p-table>
-</div>

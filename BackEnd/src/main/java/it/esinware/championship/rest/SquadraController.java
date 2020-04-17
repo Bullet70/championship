@@ -1,6 +1,7 @@
 package it.esinware.championship.rest;
 
 import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,9 +20,9 @@ public class SquadraController {
 	@Autowired
 	private SquadraService service;
 
-	@GetMapping(path = "{id}")
-	public ResponseEntity<SquadraModel> loadSquadra(@PathVariable Long id) {
-		return ResponseEntity.ok(service.loadSquadra(id));
+	@GetMapping(path = "{teams}")
+	public ResponseEntity<SquadraModel> loadSquadra(@PathVariable Long teams) {
+		return ResponseEntity.ok(service.loadSquadra(teams));
 	}
 	
 	public ResponseEntity<SquadraModel> saveSquadra(@PathVariable Long id) {

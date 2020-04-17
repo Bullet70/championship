@@ -11,15 +11,15 @@ import it.esinware.championship.dto.SquadraModel;
 import it.esinware.championship.persistence.SquadraRepository;
 
 @Service
-public class SquadraService {
+public class SquadraService<reposSquadra> {
 	
 	@Autowired
 	private SquadraRepository reposSquadra;
 	
 	
-	public SquadraModel loadSquadra(Long id) {
+	public SquadraModel loadSquadra(Long teams) {
 		SquadraModel model = new SquadraModel();
-		Squadra squadra = reposSquadra.getOne(id);
+		Squadra squadra = reposSquadra.getOne(teams);
 		model.setDescription(squadra.getName());
 		squadra.getPlayers().forEach( player -> {
 			SquadraModel playerModel = new SquadraModel();
@@ -54,4 +54,6 @@ public class SquadraService {
 
         return reposSquadra.findById(id);
     }
+	
+	
 }

@@ -14,6 +14,7 @@ public class Squadra {
 
 	@Id
 	private Long id;
+	private Long teams;
 	private String name;
 	@OneToMany
 	@OrderBy("player")
