@@ -17,7 +17,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FixturesModule } from 'app/components/fixtures/fixtures.module';
 import { TeamService } from 'app/services/team.service';
 import { PlayerComponent } from 'app/components/player/player.component';
-import { PlayerModule } from 'app/components/player/player.module';
+
 
 @NgModule({
   declarations: [
@@ -40,13 +40,14 @@ import { PlayerModule } from 'app/components/player/player.module';
 		TabMenuModule,
 		SplitButtonModule,
 		AppRoutingModule,
-		FixturesModule,
-		PlayerModule
+		FixturesModule, 
+		Playermodule
 		
 		
   ],
   providers: [
 		TeamService
+		PlayerService
 	],
   bootstrap: [AppComponent],
 	entryComponents: []

@@ -16,9 +16,9 @@ public class PlayerService {
 	@Autowired
 	private PlayerRepository reposPlayer;
 
-	public PlayerModel loadPlayer(Long id) {
+	public PlayerModel loadPlayer(Long players) {
 		PlayerModel model = new PlayerModel();
-		Player player = reposPlayer.getOne(id);
+		Player player = reposPlayer.getOne(players);
 		return model;
 		
 	}

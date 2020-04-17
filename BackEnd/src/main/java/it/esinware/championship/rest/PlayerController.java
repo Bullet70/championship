@@ -20,9 +20,9 @@ public class PlayerController {
 	private PlayerService service;
 	
 	
-	@GetMapping(path = "{id}")
-	public ResponseEntity<PlayerModel> loadPlayer(@PathVariable Long id) {
-		return ResponseEntity.ok(service.loadPlayer(id));
+	@GetMapping(path = "{players}")
+	public ResponseEntity<PlayerModel> loadPlayer(@PathVariable Long players) {
+		return ResponseEntity.ok(service.loadPlayer(players));
 	}
 
 	public ResponseEntity<PlayerModel> savePlayer(@PathVariable Long id) {

@@ -10,6 +10,7 @@ public class Player {
 	
 	@Id
 	private Long id;
+	private Long players;
 	private String surname;
 	private String name;
 	
