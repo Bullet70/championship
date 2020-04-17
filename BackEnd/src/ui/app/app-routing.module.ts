@@ -4,7 +4,7 @@ import { TeamComponent } from 'app/components/team/team.component';
 import { PlayerComponent } from 'app/components/player/player.component';
 
 const routes: Routes = [
-	{ path: 'teams', component: TeamComponent }
+	{ path: 'teams', component: TeamComponent },
 	{ path: 'players', component: PlayerComponent }
 ]
 

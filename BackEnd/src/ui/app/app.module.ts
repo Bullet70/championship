@@ -9,47 +9,46 @@ import { DropdownModule } from 'primeng/dropdown';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { AppComponent } from 'app/app.component';
-import {TabMenuModule} from 'primeng/tabmenu';
-import {SplitButtonModule} from 'primeng/splitbutton';
+import { TabMenuModule } from 'primeng/tabmenu';
+import { SplitButtonModule } from 'primeng/splitbutton';
 import { MenuComponent } from 'app/components/menu.components';
 import { TeamComponent } from 'app/components/team/team.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FixturesModule } from 'app/components/fixtures/fixtures.module';
 import { TeamService } from 'app/services/team.service';
 import { PlayerComponent } from 'app/components/player/player.component';
-
+import { PlayerService } from 'app/services/player.service';
 
 @NgModule({
-  declarations: [
+	declarations: [
 		AppComponent,
 		MenuComponent,
 		TeamComponent,
 		PlayerComponent
-  ],
-  imports: [
-    BrowserModule,
+	],
+	imports: [
+		BrowserModule,
 		BrowserAnimationsModule,
-    CommonModule,
-    FormsModule,
+		CommonModule,
+		FormsModule,
 		RouterModule,
 		HttpClientModule,
-    ReactiveFormsModule,
+		ReactiveFormsModule,
 		DropdownModule,
 		ButtonModule,
 		TableModule,
 		TabMenuModule,
 		SplitButtonModule,
 		AppRoutingModule,
-		FixturesModule, 
-		Playermodule
-		
-		
-  ],
-  providers: [
-		TeamService
+		FixturesModule
+
+
+	],
+	providers: [
+		TeamService,
 		PlayerService
 	],
-  bootstrap: [AppComponent],
+	bootstrap: [AppComponent],
 	entryComponents: []
 })
-export class AppModule {}
+export class AppModule { }

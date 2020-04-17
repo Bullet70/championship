@@ -1,17 +1,18 @@
 import { Component } from '@angular/core';
 import { PlayerModel } from 'app/models';
+import { PlayerService } from 'app/services/player.service';
 
-@component({
+@Component({
 	templateUrl: 'player.component.html'
 })
 export class PlayerComponent {
 	
-	giornata: PlayerModel;
-	giornate: PlayerModel[]= new Array();
+	player: PlayerModel;
+	players: PlayerModel[]= new Array();
 	
-	constructor(private service: TeamService) {}
+	constructor(private service: PlayerService) {}
 	
 	ngOnInit() {
-		this.service.loadPlayers().subscribe(response => this.player = response);
+		this.service.loadPlayers().subscribe(response => this.players = response);
 	}
 }
