@@ -24,4 +24,4 @@ import { PlayerComponent } from 'app/components/player/player.component';
 
 	]
 })
-export class FixturesModule {}
+export class PlayerModule {}
