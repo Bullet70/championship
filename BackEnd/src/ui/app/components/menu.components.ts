@@ -18,8 +18,8 @@ export class MenuComponent {
         this.items1 = [
             {label: 'Squadre', icon: 'pi pi-fw pi-squadre', routerLink: 'teams'},
             {label: 'Calendario', icon: 'pi pi-fw pi-calendario', routerLink: 'fixtures'},
-            {label: 'Classifica', icon: 'pi pi-fw pi-classifica'},
-            {label: 'Marcatori', icon: 'pi pi-fw pi-marcatori'},
+            {label: 'Classifica', icon: 'pi pi-fw pi-classifica', routerLink: 'rankings' },
+            {label: 'Marcatori', icon: 'pi pi-fw pi-marcatori', routerLink: 'players'},
         ];
 
 

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { PlayerModel } from 'app/models';
 
-@component({
+@Component({
 	templateUrl: 'player.component.html'
 })
 export class PlayerComponent {
