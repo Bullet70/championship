@@ -17,9 +17,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { FixturesModule } from 'app/components/fixtures/fixtures.module';
 import { TeamService } from 'app/services/team.service';
 import { PlayerComponent } from 'app/components/player/player.component';
-import { RankingModule } from 'app/components/ranking/ranking.module';
-import {DataViewModule} from 'primeng/dataview';
 import { PlayerService } from 'app/services/player.service';
+import { RankingComponent } from 'app/components/ranking/ranking.component';
 
 
 @NgModule({
@@ -27,7 +26,8 @@ import { PlayerService } from 'app/services/player.service';
 		AppComponent,
 		MenuComponent,
 		TeamComponent,
-		PlayerComponent
+		PlayerComponent,
+		RankingComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -44,8 +44,7 @@ import { PlayerService } from 'app/services/player.service';
 		SplitButtonModule,
 		AppRoutingModule,
 		FixturesModule, 
-		RankingModule,
-		DataViewModule
+		
 		
 		
   ],
