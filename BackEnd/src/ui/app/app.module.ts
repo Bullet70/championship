@@ -17,7 +17,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { FixturesModule } from 'app/components/fixtures/fixtures.module';
 import { TeamService } from 'app/services/team.service';
 import { PlayerComponent } from 'app/components/player/player.component';
-import {CarouselModule} from 'primeng/carousel';
+import { RankingModule } from 'app/components/ranking/ranking.module';
+import {DataViewModule} from 'primeng/dataview';
 
 
 
@@ -44,7 +45,8 @@ import {CarouselModule} from 'primeng/carousel';
 		AppRoutingModule,
 		FixturesModule, 
 		Playermodule,
-		CarouselModule
+		RankingModule,
+		DataViewModule
 		
 		
   ],

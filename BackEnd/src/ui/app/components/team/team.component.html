@@ -19,20 +19,3 @@
 	</p-table>
 </div>
 
-<p-carousel [value]="squadre" [numVisible]="4" [numScroll]="3" [circular]="false">
-    <p-header>
-        <h3>Basic</h3>
-    </p-header>
-    <ng-template let-squadre pTemplate="item">
-                <div class="p-col-12 team-data">
-                    <div class="team-title">{{squadra.name}}</div>
-                    
-                    <div class="team-buttons">
-                        <button pButton type="button" class="ui-button-secondary" icon="pi pi-search"></button>
-                        <button pButton type="button" class="ui-button-secondary" icon="pi pi-star"></button>
-                        <button pButton type="button" class="ui-button-secondary" icon="pi pi-cog"></button>
-                    </div>
-                </div>
-          
-    </ng-template>
-</p-carousel>
