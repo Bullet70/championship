@@ -9,19 +9,21 @@ import { MenuItem } from 'primeng/api';
 })
 export class MenuComponent {
 	
-	items1:MenuItem[];
+	items:MenuItem[];
 	
 	
 	activeItem:MenuItem;
 	
 
     ngOnInit() {
-        this.items1 = [
+        this.items = [
             {label: 'Italia', icon: 'pi pi-fw pi-squadre', routerLink: 'championships'},
             {label: 'Germania', icon: 'pi pi-fw pi-calendario', routerLink: 'championships'},
             {label: 'Inghilterra', icon: 'pi pi-fw pi-classifica', routerLink: 'championships'},
             {label: 'Spagna', icon: 'pi pi-fw pi-marcatori', routerLink: 'championships'},
         ];
+
+		 this.activeItem = this.items[0];
 
 		 
 	
