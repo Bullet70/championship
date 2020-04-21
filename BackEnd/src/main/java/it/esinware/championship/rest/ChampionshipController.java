@@ -19,9 +19,9 @@ public class ChampionshipController {
 	private ChampionshipService service;
 	
 	
-	@GetMapping(path = "{id}")
-	public ResponseEntity<ChampionshipModel> loadChampionship(@PathVariable Long id) {
-		return ResponseEntity.ok(service.loadCampionato(id));
+	@GetMapping(path = "{championships}")
+	public ResponseEntity<ChampionshipModel> loadChampionship(@PathVariable Long championships) {
+		return ResponseEntity.ok(service.loadCampionato(championships));
 	}
 	
 	

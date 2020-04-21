@@ -16,6 +16,7 @@ public class Campionato {
 	
 	@Id
 	private Long id;
+	private Long championships;
 	@Temporal(TemporalType.DATE)
 	private Date startYear;
 	@Temporal(TemporalType.DATE)

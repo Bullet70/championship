@@ -1,5 +1,4 @@
 package it.esinware.championship.rest;
-import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,15 +11,14 @@ import it.esinware.championship.service.CountryService;
 
 @RestController
 @RequestMapping(path = "country")
-
 public class CountryController {
 	
 	@Autowired
 	private CountryService service;
 	
-	@GetMapping(path = "{id}")
-	public ResponseEntity<CountryModel> loadCountry(@PathVariable Long id) {
-		return ResponseEntity.ok(service.loadCountry(id));
+	@GetMapping(path = "{countries}")
+	public ResponseEntity<CountryModel> loadCountry(@PathVariable Long countries) {
+		return ResponseEntity.ok(service.loadCountry(countries));
 	}
 
 }

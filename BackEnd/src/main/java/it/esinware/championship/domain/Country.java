@@ -8,6 +8,7 @@ import lombok.Data;
 public class Country {
 	@Id
 	private Long id;
+	private Long countries;
 	private String name;
 	
 	protected Country () {}

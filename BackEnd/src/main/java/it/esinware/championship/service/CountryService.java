@@ -13,9 +13,9 @@ public class CountryService {
 	@Autowired
 	private CountryRepository reposCountry;
 	
-	public CountryModel loadCountry(Long id) {
+	public CountryModel loadCountry(Long countries) {
 		CountryModel model = new CountryModel();
-		Country country = reposCountry.getOne(id);
+		Country country = reposCountry.getOne(countries);
 		return model;
 	}
 }

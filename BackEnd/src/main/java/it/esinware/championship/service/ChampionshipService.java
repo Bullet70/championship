@@ -16,9 +16,9 @@ public class ChampionshipService {
 	private ChampionshipRepository reposCampionato;
 	
 	
-	public ChampionshipModel loadCampionato(Long id) {
+	public ChampionshipModel loadCampionato(Long championships) {
 		ChampionshipModel model = new ChampionshipModel();
-		Campionato campionato = reposCampionato.getOne(id);
+		Campionato campionato = reposCampionato.getOne(championships);
 		model.setDescription(campionato.getStartYear().getYear() + "/" + campionato.getEndYear().getYear());
 		campionato.getFixtures().forEach(round -> {
 			GiornataModel roundModel = new GiornataModel();
