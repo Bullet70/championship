@@ -16,10 +16,10 @@ export class MenuComponent {
 
     ngOnInit() {
         this.items1 = [
-            {label: 'Squadre', icon: 'pi pi-fw pi-squadre', routerLink: 'teams'},
-            {label: 'Calendario', icon: 'pi pi-fw pi-calendario', routerLink: 'fixtures'},
-            {label: 'Classifica', icon: 'pi pi-fw pi-classifica', routerLink: 'rankings' },
-            {label: 'Marcatori', icon: 'pi pi-fw pi-marcatori', routerLink: 'players'},
+            {label: 'Italia', icon: 'pi pi-fw pi-squadre', routerLink: 'championships'},
+            {label: 'Germania', icon: 'pi pi-fw pi-calendario', routerLink: 'championships'},
+            {label: 'Inghilterra', icon: 'pi pi-fw pi-classifica', routerLink: 'championships' },
+            {label: 'Spagna', icon: 'pi pi-fw pi-marcatori', routerLink: 'championships'},
         ];
 
 

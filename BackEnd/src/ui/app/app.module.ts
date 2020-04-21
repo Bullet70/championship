@@ -19,6 +19,8 @@ import { TeamService } from 'app/services/team.service';
 import { PlayerComponent } from 'app/components/player/player.component';
 import { PlayerService } from 'app/services/player.service';
 import { RankingComponent } from 'app/components/ranking/ranking.component';
+import { OrderListModule } from 'primeng/orderlist';
+import { ChampionshipComponent } from 'app/components/championship/championship.component)';
 
 
 @NgModule({
@@ -28,6 +30,7 @@ import { RankingComponent } from 'app/components/ranking/ranking.component';
 		TeamComponent,
 		PlayerComponent,
 		RankingComponent,
+		ChampionshipComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -44,6 +47,7 @@ import { RankingComponent } from 'app/components/ranking/ranking.component';
 		SplitButtonModule,
 		AppRoutingModule,
 		FixturesModule, 
+		OrderListModule,
 		
 		
 		

@@ -1,0 +1,28 @@
+<div>
+	<label>Nome Campionato</label>
+	<input type="text" [(ngModel)]="championship.description" />
+</div>
+<div>
+	<label>Inizio Campionato</label>
+	<input type="text" [(ngModel)]="championship.startYear" />
+</div>
+<div>
+	<label>Fine Campionato</label>
+	<input type="text" [(ngModel)]="championship.endYear" />
+</div>
+<div>
+	<p-table [value]="championships">
+		<ng-template pTemplate="header">
+			<th>Nome Campionato</th>
+			<th>Inizio</th>
+			<th>Fine</th>
+		</ng-template>
+		<ng-template pTemplate="body" let-row>
+			<tr class="tableRow">
+				<td>{{row.description}}</td>
+				<td>{{row.startYear}}</td>	
+				<td>{{row.endYear}}</td>
+			</tr>
+		</ng-template>
+	</p-table>
+</div>
