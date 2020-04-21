@@ -18,7 +18,7 @@ export class MenuComponent {
         this.items1 = [
             {label: 'Italia', icon: 'pi pi-fw pi-squadre', routerLink: 'championships'},
             {label: 'Germania', icon: 'pi pi-fw pi-calendario', routerLink: 'championships'},
-            {label: 'Inghilterra', icon: 'pi pi-fw pi-classifica', routerLink: 'championships' },
+            {label: 'Inghilterra', icon: 'pi pi-fw pi-classifica', routerLink: 'championships'},
             {label: 'Spagna', icon: 'pi pi-fw pi-marcatori', routerLink: 'championships'},
         ];
 

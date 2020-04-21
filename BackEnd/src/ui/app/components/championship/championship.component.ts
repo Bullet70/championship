@@ -4,7 +4,7 @@ import { ChampionshipModel } from 'app/models';
 @Component({
 	templateUrl: 'championship.component.html'
 })
-export class FixturesComponent {
+export class ChampionshipComponent {
 	
 	championship: ChampionshipModel;
 	championships: ChampionshipModel[]= new Array();

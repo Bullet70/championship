@@ -20,7 +20,7 @@ import { PlayerComponent } from 'app/components/player/player.component';
 import { PlayerService } from 'app/services/player.service';
 import { RankingComponent } from 'app/components/ranking/ranking.component';
 import { OrderListModule } from 'primeng/orderlist';
-import { ChampionshipComponent } from 'app/components/championship/championship.component)';
+import { ChampionshipComponent } from 'app/components/championship/championship.component';
 
 
 @NgModule({
