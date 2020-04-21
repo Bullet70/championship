@@ -21,6 +21,8 @@ import { PlayerService } from 'app/services/player.service';
 import { RankingComponent } from 'app/components/ranking/ranking.component';
 import { OrderListModule } from 'primeng/orderlist';
 import { ChampionshipComponent } from 'app/components/championship/championship.component';
+import { ChampionshipService } from 'app/services/championship.service';
+import { CountryService } from 'app/services/country.service';
 
 
 @NgModule({
@@ -55,7 +57,10 @@ import { ChampionshipComponent } from 'app/components/championship/championship.
  
 	providers: [
 		TeamService,
-		PlayerService
+		PlayerService,
+		ChampionshipService,
+		CountryService,
+		
 	],
 	bootstrap: [AppComponent],
 	entryComponents: []
