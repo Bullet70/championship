@@ -24,6 +24,8 @@ import { ChampionshipComponent } from 'app/components/championship/championship.
 import { ChampionshipService } from 'app/services/championship.service';
 import { CountryService } from 'app/services/country.service';
 import { BackEndInterceptor } from 'app/extension/backend.interceptor';
+import { ChampionshipmenuComponent } from 'app/components/championshipmenu.component';
+
 
 @NgModule({
 	declarations: [
@@ -33,6 +35,8 @@ import { BackEndInterceptor } from 'app/extension/backend.interceptor';
 		PlayerComponent,
 		RankingComponent,
 		ChampionshipComponent,
+		ChampionshipmenuComponent,
+		
 	],
 	imports: [
 		BrowserModule,

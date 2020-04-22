@@ -3,44 +3,28 @@ import { MenuItem } from 'primeng/api';
 
 
 @Component({
-	selector: 'app-menu',
+	selector: 'app-menu', 
 	templateUrl: './menu.component.html',
 	styleUrls: ['./menu.component.css']
 })
 export class MenuComponent {
 	
-	items:MenuItem[];
-	
+	items:MenuItem[]
 	
 	activeItem:MenuItem;
 	
 
     ngOnInit() {
         this.items = [
-            {label: 'Italia', icon: 'pi pi-fw pi-squadre', routerLink: 'championships', fragment: '1'},
-            {label: 'Germania', icon: 'pi pi-fw pi-calendario', routerLink: 'championships'},
-            {label: 'Inghilterra', icon: 'pi pi-fw pi-classifica', routerLink: 'championships'},
-            {label: 'Spagna', icon: 'pi pi-fw pi-marcatori', routerLink: 'championships'},
+            {label: 'Italia', icon: 'pi pi-fw pi-italia', routerLink: 'championships', fragment: '1'},
+            {label: 'Germania', icon: 'pi pi-fw pi-germania', routerLink: 'championships', fragment: '2'},
+            {label: 'Inghilterra', icon: 'pi pi-fw pi-Inghilterra', routerLink: 'championships', fragment: '3'},
+            {label: 'Spagna', icon: 'pi pi-fw pi-spagna', routerLink: 'championships', fragment: '4'},
+			{label: 'Francia', icon: 'pi pi-fw pi-francia', routerLink: 'championships', fragment: '5'},
+			{label: 'Olanda', icon: 'pi pi-fw pi-olanda', routerLink: 'championships', fragment: '6'}
         ];
 
 		 this.activeItem = this.items[0];
 
-		 
-	
-
-//        this.items = [
-//            {label: 'Serie A', icon: 'pi pi-fw pi-seriea'},
-//            {label: 'Serie B', icon: 'pi pi-fw pi-serieb'},
-//            {label: 'Serie C', icon: 'pi pi-fw pi-seriec'},
-//           
-//        ];
-//
-//		 this.activeItem = this.items[1];
-
-
-
-
-		
-	}
+		}
 }
-
