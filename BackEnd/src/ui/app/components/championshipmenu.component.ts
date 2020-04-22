@@ -4,7 +4,7 @@ import { MenuItem } from 'primeng/api';
 
 @Component({
 	selector: 'championship-menu', 
-	templateUrl: './championshipMenu.component.html',
+	templateUrl: './championshipmenu.component.html',
 })
 export class ChampionshipmenuComponent {
 	

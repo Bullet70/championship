@@ -10,9 +10,9 @@ export class ChampionshipService {
 	
 	public loadChampionships(): Observable<ChampionshipModel[]>{
 		return of([
-            {id: '7', description: 'Serie A'},
-           {id: '8', description: 'Serie B'},
-            {id: '9', description: 'Serie C'},
+            {id: '7', description: 'Serie A', startYear: 2019, endYear: 2020},
+           {id: '8', description: 'Serie B', startYear: 2019, endYear: 2020},
+            {id: '9', description: 'Serie C', startYear: 2019, endYear: 2020},
         ]);
 	}
 }
