@@ -10,7 +10,7 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Squadra {
+public class Team {
 
 	@Id
 	private Long id;
@@ -20,9 +20,9 @@ public class Squadra {
 	@OrderBy("player")
 	private Set<Player> players;
 	
-	protected Squadra () {}
+	protected Team () {}
 	
-	 public Squadra(String name) {
+	 public Team(String name) {
 		    this.name = name;
 		  }
 }

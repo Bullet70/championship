@@ -3,8 +3,8 @@ package it.esinware.championship.service;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import it.esinware.championship.domain.Partita;
-import it.esinware.championship.dto.PartitaModel;
+import it.esinware.championship.domain.Game;
+import it.esinware.championship.dto.GameModel;
 import it.esinware.championship.persistence.PartitaRepository;
 
 
@@ -16,12 +16,12 @@ public class PartitaService {
 	@Autowired
 	private PartitaRepository reposPartita;
 
-	public PartitaModel loadPartita(Long id) {
-		PartitaModel model = new PartitaModel();
-		Partita partita = reposPartita.getOne(id);
+	public GameModel loadPartita(Long id) {
+		GameModel model = new GameModel();
+		Game partita = reposPartita.getOne(id);
 		model.setDescription(partita.getHomeTeam().getName() + "/" + partita.getGuestTeam().getName());
 		partita.getScore().forEach(minute -> {
-			PartitaModel scoreModel = new PartitaModel();
+			GameModel scoreModel = new GameModel();
 			scoreModel.setMinute(scoreModel.getMinute());
 			model.addScore(scoreModel);
 		});
@@ -29,12 +29,12 @@ public class PartitaService {
 		return model;
 		}
 	
-	public PartitaModel savePartita(Long id){
-		PartitaModel model= new PartitaModel();
-		Partita partita = reposPartita.getOne(id);
+	public GameModel savePartita(Long id){
+		GameModel model= new GameModel();
+		Game partita = reposPartita.getOne(id);
 		model.setDescription(partita.getHomeTeam().getName() + "/" + partita.getGuestTeam().getName());
 		partita.getScore().forEach(minute -> {
-			PartitaModel scoreModel = new PartitaModel();
+			GameModel scoreModel = new GameModel();
 			scoreModel.setMinute(scoreModel.getMinute());
 			model.addScore(scoreModel);
 		});
@@ -45,7 +45,7 @@ public class PartitaService {
 		reposPartita.deleteById(id);
 	}
 
-	public Optional <Partita> findByIdPartita(Long id) {
+	public Optional <Game> findByIdPartita(Long id) {
 
         return reposPartita.findById(id);
     }

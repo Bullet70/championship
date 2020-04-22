@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import it.esinware.championship.domain.Giornata;
-import it.esinware.championship.dto.GiornataModel;
+import it.esinware.championship.domain.Round;
+import it.esinware.championship.dto.RoundModel;
 import it.esinware.championship.service.GiornataService;
 
 
@@ -21,11 +21,11 @@ public class GiornataController {
 	
 	
 	@GetMapping(path = "{id}")
-	public ResponseEntity<GiornataModel> loadGiornata(@PathVariable Long id) {
+	public ResponseEntity<RoundModel> loadGiornata(@PathVariable Long id) {
 		return ResponseEntity.ok(service.loadGiornata(id));
 	}
 	
-	public ResponseEntity<GiornataModel> saveGiornata(@PathVariable Long id) {
+	public ResponseEntity<RoundModel> saveGiornata(@PathVariable Long id) {
 		return ResponseEntity.ok(service.saveGiornata(id));
 	}
 	
@@ -34,7 +34,7 @@ public class GiornataController {
 		
 	}
 	
-	public ResponseEntity<Optional<Giornata>> findbyIdGiornata(@PathVariable Long id) {
+	public ResponseEntity<Optional<Round>> findbyIdGiornata(@PathVariable Long id) {
 		return ResponseEntity.ok(service.findByIdGiornata(id));
 	}
 	

@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import it.esinware.championship.domain.Squadra;
-import it.esinware.championship.dto.SquadraModel;
+import it.esinware.championship.domain.Team;
+import it.esinware.championship.dto.TeamModel;
 import it.esinware.championship.service.SquadraService;
 
 
@@ -21,11 +21,11 @@ public class SquadraController {
 	private SquadraService service;
 
 	@GetMapping(path = "{teams}")
-	public ResponseEntity<SquadraModel> loadSquadra(@PathVariable Long teams) {
+	public ResponseEntity<TeamModel> loadSquadra(@PathVariable Long teams) {
 		return ResponseEntity.ok(service.loadSquadra(teams));
 	}
 	
-	public ResponseEntity<SquadraModel> saveSquadra(@PathVariable Long id) {
+	public ResponseEntity<TeamModel> saveSquadra(@PathVariable Long id) {
 		return ResponseEntity.ok(service.saveSquadra(id));
 	}
 	
@@ -33,7 +33,7 @@ public class SquadraController {
 		service.deleteSquadra(id);
 		}
 	
-	public ResponseEntity<Optional<Squadra>> findbyIdSquadra(@PathVariable Long id) {
+	public ResponseEntity<Optional<Team>> findbyIdSquadra(@PathVariable Long id) {
 		return ResponseEntity.ok(service.findByIdSquadra(id));
 	}
 	

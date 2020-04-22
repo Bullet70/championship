@@ -6,25 +6,19 @@ import java.util.TreeSet;
 import lombok.Data;
 
 @Data
-public class PartitaModel implements Serializable{
-
+public class GameModel implements Serializable {
 	private static final long serialVersionUID = 4364972170687145136L;
-	
 	private String description;
-	private SquadraModel homeTeam;
-	private SquadraModel guestTeam;
+	private TeamModel homeTeam;
+	private TeamModel guestTeam;
 	private Integer minute;
 	private Integer game;
-	private SortedSet<PartitaModel>scores;
-	
-	
-	public void addScore(PartitaModel score) {
+	private SortedSet<GameModel> scores;
+
+	public void addScore(GameModel score) {
 		if(scores == null)
 			scores = new TreeSet<>();
 		if(!scores.contains(score))
 			scores.add(score);
 	}
-
-
-	
 }

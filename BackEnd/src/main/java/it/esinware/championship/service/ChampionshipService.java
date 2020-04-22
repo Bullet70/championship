@@ -3,9 +3,9 @@ package it.esinware.championship.service;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import it.esinware.championship.domain.Campionato;
+import it.esinware.championship.domain.Championship;
 import it.esinware.championship.dto.ChampionshipModel;
-import it.esinware.championship.dto.GiornataModel;
+import it.esinware.championship.dto.RoundModel;
 import it.esinware.championship.persistence.ChampionshipRepository;
 
 @Service
@@ -18,10 +18,10 @@ public class ChampionshipService {
 	
 	public ChampionshipModel loadCampionato(Long id) {
 		ChampionshipModel model = new ChampionshipModel();
-		Campionato campionato = reposCampionato.getOne(id);
+		Championship campionato = reposCampionato.getOne(id);
 		model.setDescription(campionato.getStartYear().getYear() + "/" + campionato.getEndYear().getYear());
 		campionato.getFixtures().forEach(round -> {
-			GiornataModel roundModel = new GiornataModel();
+			RoundModel roundModel = new RoundModel();
 			roundModel.setRoundNumber(round.getNumberRound());
 			model.addRound(roundModel);
 		});
@@ -32,10 +32,10 @@ public class ChampionshipService {
 	
 	public ChampionshipModel saveCampionato(Long id){
 		ChampionshipModel model= new ChampionshipModel();
-		Campionato campionato=reposCampionato.getOne(id);
+		Championship campionato=reposCampionato.getOne(id);
 		model.setDescription(campionato.getStartYear().getYear() + "/" + campionato.getEndYear().getYear());
 		campionato.getFixtures().forEach(round -> {
-			GiornataModel roundModel = new GiornataModel();
+			RoundModel roundModel = new RoundModel();
 			roundModel.setRoundNumber(round.getNumberRound());
 			model.addRound(roundModel);
 		});
@@ -48,7 +48,7 @@ public class ChampionshipService {
 	}
 	
 	
-	public Optional <Campionato> findByIdCampionato(Long id) {
+	public Optional <Championship> findByIdCampionato(Long id) {
 
         return reposCampionato.findById(id);
     }

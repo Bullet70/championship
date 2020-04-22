@@ -7,7 +7,6 @@ import lombok.Data;
 @Data
 @Entity
 public class Score {
-	
 	@Id
 	private Long id;
 	private Player player;
@@ -17,11 +16,4 @@ public class Score {
 	private boolean yellowCard;
 	private boolean redCard;
 	private boolean injured;
-	
-	protected Score () {}
-	
-	 public Score(Player player, boolean ownGol) {
-		    this.player = player;
-		    this.ownGol = ownGol;
-		  }
 }

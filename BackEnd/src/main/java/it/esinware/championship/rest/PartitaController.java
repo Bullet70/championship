@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import it.esinware.championship.domain.Partita;
-import it.esinware.championship.dto.PartitaModel;
+import it.esinware.championship.domain.Game;
+import it.esinware.championship.dto.GameModel;
 import it.esinware.championship.service.PartitaService;
 
 
@@ -21,11 +21,11 @@ public class PartitaController {
 	
 	
 	@GetMapping(path = "{id}")
-	public ResponseEntity<PartitaModel> loadPartita(@PathVariable Long id) {
+	public ResponseEntity<GameModel> loadPartita(@PathVariable Long id) {
 		return ResponseEntity.ok(service.loadPartita(id));
 	}
 
-	public ResponseEntity<PartitaModel> savePartita(@PathVariable Long id) {
+	public ResponseEntity<GameModel> savePartita(@PathVariable Long id) {
 		return ResponseEntity.ok(service.savePartita(id));
 	}
 	
@@ -34,7 +34,7 @@ public class PartitaController {
 		
 	}
 	
-	public ResponseEntity<Optional<Partita>> findbyIdPartita(@PathVariable Long id) {
+	public ResponseEntity<Optional<Game>> findbyIdPartita(@PathVariable Long id) {
 		return ResponseEntity.ok(service.findByIdPartita(id));
 	}
 	

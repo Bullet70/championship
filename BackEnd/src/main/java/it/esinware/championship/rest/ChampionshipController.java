@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import it.esinware.championship.domain.Campionato;
+import it.esinware.championship.domain.Championship;
 import it.esinware.championship.dto.ChampionshipModel;
 import it.esinware.championship.service.ChampionshipService;
 
@@ -34,7 +34,7 @@ public class ChampionshipController {
 		
 	}
 	
-	public ResponseEntity<Optional<Campionato>> findbyIdChampionship(@PathVariable Long id) {
+	public ResponseEntity<Optional<Championship>> findbyIdChampionship(@PathVariable Long id) {
 		return ResponseEntity.ok(service.findByIdCampionato(id));
 	}
 	

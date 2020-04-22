@@ -12,19 +12,23 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Giornata {
+public class Championship {
+	
 	@Id
 	private Long id;
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date day;
+	@Temporal(TemporalType.DATE)
+	private Date startYear;
+	@Temporal(TemporalType.DATE)
+	private Date endYear;
 	@OneToMany
-	@OrderBy("game")
-	private SortedSet<Partita> partita;
-	private Integer numberRound;
+	@OrderBy("numberRound")
+	private SortedSet<Round> fixtures;
 	
-	protected Giornata() {}
+	protected Championship() {}
 	
-	 public Giornata(Date day) {
-		    this.day = day;
+	 public Championship(Date startYear, Date endYear) {
+		    this.startYear = startYear;
+		    this.endYear = endYear;
 		  }
 }
+

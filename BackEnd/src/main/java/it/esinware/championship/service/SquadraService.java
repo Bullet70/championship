@@ -5,9 +5,9 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import it.esinware.championship.domain.Giornata;
-import it.esinware.championship.domain.Squadra;
-import it.esinware.championship.dto.SquadraModel;
+import it.esinware.championship.domain.Round;
+import it.esinware.championship.domain.Team;
+import it.esinware.championship.dto.TeamModel;
 import it.esinware.championship.persistence.SquadraRepository;
 
 @Service
@@ -17,12 +17,12 @@ public class SquadraService<reposSquadra> {
 	private SquadraRepository reposSquadra;
 	
 	
-	public SquadraModel loadSquadra(Long teams) {
-		SquadraModel model = new SquadraModel();
-		Squadra squadra = reposSquadra.getOne(teams);
+	public TeamModel loadSquadra(Long teams) {
+		TeamModel model = new TeamModel();
+		Team squadra = reposSquadra.getOne(teams);
 		model.setDescription(squadra.getName());
 		squadra.getPlayers().forEach( player -> {
-			SquadraModel playerModel = new SquadraModel();
+			TeamModel playerModel = new TeamModel();
 				playerModel.setName(playerModel.getName());
 				playerModel.setSurname(playerModel.getSurname());
 				model.addPlayer(playerModel);
@@ -33,12 +33,12 @@ public class SquadraService<reposSquadra> {
 	}
 		
 	
-	public SquadraModel saveSquadra (Long id){
-		SquadraModel model= new SquadraModel();
-		Squadra squadra=reposSquadra.getOne(id);
+	public TeamModel saveSquadra (Long id){
+		TeamModel model= new TeamModel();
+		Team squadra=reposSquadra.getOne(id);
 		model.setDescription(squadra.getName());
 		squadra.getPlayers().forEach( player -> {
-			SquadraModel playerModel = new SquadraModel();
+			TeamModel playerModel = new TeamModel();
 				playerModel.setName(playerModel.getName());
 				playerModel.setSurname(playerModel.getSurname());
 				model.addPlayer(playerModel);
@@ -50,7 +50,7 @@ public class SquadraService<reposSquadra> {
 		reposSquadra.deleteById(id);
 	}
 	
-	public Optional <Squadra> findByIdSquadra(Long id) {
+	public Optional <Team> findByIdSquadra(Long id) {
 
         return reposSquadra.findById(id);
     }

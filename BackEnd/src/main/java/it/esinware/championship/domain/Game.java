@@ -10,22 +10,22 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Partita {
+public class Game {
 
 	@Id
 	private Long id;
 	@OneToOne
-	private Squadra homeTeam;
+	private Team homeTeam;
 	@OneToOne
-	private Squadra guestTeam;
+	private Team guestTeam;
 	@OneToMany
 	@OrderBy("minute")
 	private SortedSet<Score> score;
 	private Integer game;
 	
-	protected Partita() {}
+	protected Game() {}
 	
-	 public Partita(Squadra homeTeam, Squadra guestTeam) {
+	 public Game(Team homeTeam, Team guestTeam) {
 		    this.homeTeam = homeTeam;
 		    this.guestTeam = guestTeam;
 		  }

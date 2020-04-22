@@ -3,9 +3,9 @@ package it.esinware.championship.service;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import it.esinware.championship.domain.Giornata;
-import it.esinware.championship.dto.GiornataModel;
-import it.esinware.championship.dto.PartitaModel;
+import it.esinware.championship.domain.Round;
+import it.esinware.championship.dto.RoundModel;
+import it.esinware.championship.dto.GameModel;
 import it.esinware.championship.persistence.GiornataRepository;
 
 
@@ -15,12 +15,12 @@ public class GiornataService {
 	@Autowired
 	private GiornataRepository reposGiornata;
 	
-	public GiornataModel loadGiornata(Long id) {
-		GiornataModel model = new GiornataModel();
-		Giornata giornata= reposGiornata.getOne(id);
+	public RoundModel loadGiornata(Long id) {
+		RoundModel model = new RoundModel();
+		Round giornata= reposGiornata.getOne(id);
 		model.setDescription(giornata.getDay().getDay());
-		giornata.getPartita().forEach( game-> {
-			PartitaModel gameModel = new PartitaModel();
+		giornata.getGames().forEach( game-> {
+			GameModel gameModel = new GameModel();
 			gameModel.getHomeTeam();
 			gameModel.getGuestTeam();
 			model.addGame(game);
@@ -30,12 +30,12 @@ public class GiornataService {
 		return model;
 	}
 	
-	public GiornataModel saveGiornata(Long id){
-		GiornataModel model= new GiornataModel();
-		Giornata giornata=reposGiornata.getOne(id);
+	public RoundModel saveGiornata(Long id){
+		RoundModel model= new RoundModel();
+		Round giornata=reposGiornata.getOne(id);
 		model.setDescription(giornata.getDay().getDay());
-		giornata.getPartita().forEach( game-> {
-			PartitaModel gameModel = new PartitaModel();
+		giornata.getGames().forEach( game-> {
+			GameModel gameModel = new GameModel();
 			gameModel.getHomeTeam();
 			gameModel.getGuestTeam();
 			model.addGame(game);
@@ -48,7 +48,7 @@ public class GiornataService {
 		reposGiornata.deleteById(id);
 	}
 	
-	public Optional <Giornata> findByIdGiornata(Long id) {
+	public Optional <Round> findByIdGiornata(Long id) {
 
         return reposGiornata.findById(id);
     }
