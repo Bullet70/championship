@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
+import { first } from 'rxjs/operators';
 import { CountryModel } from 'app/models';
 
 @Injectable()
@@ -13,8 +14,10 @@ export class CountryService {
             {id: '1', name: 'Italia'},
             {id: '2', name: 'Germania'},
             {id: '3', name: 'Inghilterra'},
-            {id: '4', name: 'Spagna'}
-        ]);
+            {id: '4', name: 'Spagna'},
+			{id: '5', name: 'Francia'},
+			{id: '6', name: 'Olanda'}
+        ]).pipe(first());
 		//return this.http.get<CountryModel[]>('countries');
 	}
 }
