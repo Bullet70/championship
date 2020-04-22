@@ -1,5 +1,4 @@
 export class CountryModel {
-	public id;
-	description: string;
+	id;
 	name: string;
 }

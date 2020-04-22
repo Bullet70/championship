@@ -21,6 +21,8 @@ public class Player {
 	protected Player() {}
 
 	public Player(String surname, String name) {
+		if(surname == null || name == null)
+			throw new NullPointerException();
 		this.surname = surname;
 		this.name = name;
 	}

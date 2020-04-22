@@ -1,3 +1,8 @@
+.wrapper {
+	align-content: center;
+	background-color: aqua;	
+}
+
 .tableRow td {
 	text-align: center;
 }

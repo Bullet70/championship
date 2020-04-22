@@ -14,33 +14,23 @@ import it.esinware.championship.service.ChampionshipService;
 @RestController
 @RequestMapping(path = "championship")
 public class ChampionshipController {
-
 	@Autowired
 	private ChampionshipService service;
-	
-	
+
 	@GetMapping(path = "{championships}")
 	public ResponseEntity<ChampionshipModel> loadChampionship(@PathVariable Long championships) {
 		return ResponseEntity.ok(service.loadCampionato(championships));
 	}
-	
-	
+
 	public ResponseEntity<ChampionshipModel> saveChampionship(@PathVariable Long id) {
 		return ResponseEntity.ok(service.saveCampionato(id));
 	}
-	
+
 	public void deleteByIdCampionato(@PathVariable Long id) {
 		service.deleteCampionato(id);
-		
 	}
-	
+
 	public ResponseEntity<Optional<Championship>> findbyIdChampionship(@PathVariable Long id) {
 		return ResponseEntity.ok(service.findByIdCampionato(id));
 	}
-	
-	
-	
-	
-	
-	
 }
