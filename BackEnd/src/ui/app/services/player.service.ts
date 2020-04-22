@@ -9,6 +9,6 @@ export class PlayerService {
 	constructor(private http: HttpClient) {}
 	
 	public loadPlayers(): Observable<PlayerModel[]> {
-		return this.http.get<PlayerModel[]>('http://localhost:8080/ChampionshipBE/players');
+		return this.http.get<PlayerModel[]>('players');
 	}
 }

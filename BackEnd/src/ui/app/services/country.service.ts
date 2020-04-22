@@ -9,6 +9,6 @@ export class CountryService {
 	constructor(private http: HttpClient) {}
 	
 	public loadCountries(): Observable<CountryModel[]> {
-		return this.http.get<CountryModel[]>('http://localhost:8080/ChampionshipBE/countries');
+		return this.http.get<CountryModel[]>('countries');
 	}
 }

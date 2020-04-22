@@ -9,6 +9,6 @@ export class TeamService {
 	constructor(private http: HttpClient) {}
 	
 	public loadTeams(): Observable<SquadraModel[]> {
-		return this.http.get<SquadraModel[]>('http://localhost:8080/ChampionshipBE/teams');
+		return this.http.get<SquadraModel[]>('teams');
 	}
 }

@@ -9,6 +9,6 @@ export class ChampionshipService {
 	constructor(private http: HttpClient) {}
 	
 	public loadChampionships(): Observable<ChampionshipModel[]> {
-		return this.http.get<ChampionshipModel[]>('http://localhost:8080/ChampionshipBE/championships');
+		return this.http.get<ChampionshipModel[]>('championships');
 	}
 }

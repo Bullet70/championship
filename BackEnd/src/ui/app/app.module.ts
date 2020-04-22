@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DropdownModule } from 'primeng/dropdown';
@@ -23,7 +23,7 @@ import { OrderListModule } from 'primeng/orderlist';
 import { ChampionshipComponent } from 'app/components/championship/championship.component';
 import { ChampionshipService } from 'app/services/championship.service';
 import { CountryService } from 'app/services/country.service';
-
+import { BackEndInterceptor } from 'app/extension/backend.interceptor';
 
 @NgModule({
 	declarations: [
@@ -60,7 +60,7 @@ import { CountryService } from 'app/services/country.service';
 		PlayerService,
 		ChampionshipService,
 		CountryService,
-		
+    { provide: HTTP_INTERCEPTORS, useClass: BackEndInterceptor, multi: true }
 	],
 	bootstrap: [AppComponent],
 	entryComponents: []
