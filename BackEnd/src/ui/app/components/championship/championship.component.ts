@@ -18,10 +18,11 @@ export class ChampionshipComponent implements OnInit {
 	
 	ngOnInit() {
 		console.log(this.snapshot.snapshot.fragment);
-		this.cService.loadChampionships().subscribe(response => {
+		this.cService.loadChampionshipsIta().subscribe(response => {
 			this.championships = [];
 			response.forEach(item => this.championships.push({label: item.description}))
 		});
+		
 	}
 	
 	bo() {
