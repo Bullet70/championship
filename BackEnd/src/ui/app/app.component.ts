@@ -11,6 +11,9 @@ import { CountryModel } from 'app/models';
 export class AppComponent implements OnInit {
 	
 	countries: CountryModel[];
+	country: CountryModel;
+	currentIndex: number;
+	isEditing: boolean = false;
 	
 	constructor(private service: CountryService) {}
 
@@ -20,5 +23,25 @@ export class AppComponent implements OnInit {
 //			this.countries = [];
 //			response.forEach(item => this.countries.push({label: item.name, routerLink: 'championships', fragment: item.id}));
 		});
+	}
+	
+	new(): CountryModel {
+		this.isEditing = true;
+		return new CountryModel();
+	}
+	
+	edit(country: CountryModel) {
+//		event.preventDefault();
+		console.log(event);
+		this.isEditing = true;
+		this.country = country;
+	}
+	
+	changeTab(event) {
+		console.log('Tab');
+		if(this.currentIndex != event.index) {
+			this.country = null;
+		}
+		this.currentIndex = event.index;
 	}
 }

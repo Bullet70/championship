@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { CountryService } from 'app/services/country.service';
 import { CountryModel } from 'app/models';
@@ -8,5 +8,5 @@ import { CountryModel } from 'app/models';
 	templateUrl: './country-edit.component.html'
 })
 export class CountryEditComponent {
-	
+	@Input() country: CountryModel;
 }

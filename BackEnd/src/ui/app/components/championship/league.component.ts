@@ -16,7 +16,7 @@ export class LeagueComponent implements OnChanges, OnInit {
 	}
 	
 	ngOnChanges(changes: SimpleChanges): void {
-		console.log(changes);
+		
 	}
 
 	ngOnInit() {
