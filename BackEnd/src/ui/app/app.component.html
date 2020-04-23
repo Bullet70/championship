@@ -1,12 +1,15 @@
 <div class="wrapper">
 	<p-tabView (onChange)="changeTab($event)">
 		<p-tabPanel *ngFor="let item of countries; let i = index">
-			<ng-template pTemplate="header">{{item.name}} - <!--p-button (onClick)="edit(item)">Modify</p-button--></ng-template>
-			<league *ngIf="!isEditing" [country]="item.id"></league>
+			<ng-template pTemplate="header">{{item.name}} 
+			 <p-button (onClick)="edit(item)">Modify</p-button>
+			</ng-template>
+			<league *ngIf="isEditing" [country]="item.id"></league>
 			<country-edit *ngIf="isEditing" [country]="country"></country-edit>
 		</p-tabPanel>
 		<p-tabPanel [header]="Add">
 			<country-edit [country]="new()"></country-edit>
+			<league-edit  
 		</p-tabPanel>
 	</p-tabView>
 <!-- 	<app-menu [items]="countries"></app-menu> -->
