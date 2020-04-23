@@ -10,6 +10,7 @@ import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { AppComponent } from 'app/app.component';
 import { TabMenuModule } from 'primeng/tabmenu';
+import { TabViewModule } from 'primeng/tabview';
 import { SplitButtonModule } from 'primeng/splitbutton';
 import { MenuComponent } from 'app/components/menu.components';
 import { TeamComponent } from 'app/components/team/team.component';
@@ -20,12 +21,14 @@ import { PlayerComponent } from 'app/components/player/player.component';
 import { PlayerService } from 'app/services/player.service';
 import { RankingComponent } from 'app/components/ranking/ranking.component';
 import { OrderListModule } from 'primeng/orderlist';
-import { ChampionshipComponent } from 'app/components/championship/championship.component';
+import { LeagueComponent } from 'app/components/championship/league.component';
 import { ChampionshipService } from 'app/services/championship.service';
 import { CountryService } from 'app/services/country.service';
 import { BackEndInterceptor } from 'app/extension/backend.interceptor';
 import { ChampionshipmenuComponent } from 'app/components/championshipmenu.component';
-
+import { LeagueService } from 'app/services/league.service';
+import { ChampionshipComponent } from 'app/components/championship/championship.component';
+import { CountryEditComponent } from 'app/components/country/country-edit.component';
 
 @NgModule({
 	declarations: [
@@ -34,9 +37,10 @@ import { ChampionshipmenuComponent } from 'app/components/championshipmenu.compo
 		TeamComponent,
 		PlayerComponent,
 		RankingComponent,
+		LeagueComponent,
 		ChampionshipComponent,
 		ChampionshipmenuComponent,
-		
+		CountryEditComponent
 	],
 	imports: [
 		BrowserModule,
@@ -52,19 +56,20 @@ import { ChampionshipmenuComponent } from 'app/components/championshipmenu.compo
 		TabMenuModule,
 		SplitButtonModule,
 		AppRoutingModule,
-		FixturesModule, 
+		FixturesModule,
 		OrderListModule,
-		
-		
-		
-  ],
- 
+		TabViewModule
+
+
+	],
+
 	providers: [
 		TeamService,
 		PlayerService,
 		ChampionshipService,
 		CountryService,
-    { provide: HTTP_INTERCEPTORS, useClass: BackEndInterceptor, multi: true }
+		LeagueService,
+		{ provide: HTTP_INTERCEPTORS, useClass: BackEndInterceptor, multi: true }
 	],
 	bootstrap: [AppComponent],
 	entryComponents: []

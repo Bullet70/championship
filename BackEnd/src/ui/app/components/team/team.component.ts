@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SquadraModel } from 'app/models';
+import { TeamModel } from 'app/models';
 import { TeamService } from 'app/services/team.service';
 
 @Component({
@@ -7,12 +7,12 @@ import { TeamService } from 'app/services/team.service';
 })
 export class TeamComponent implements OnInit {
 	
-	squadra: SquadraModel;
-	squadre: SquadraModel[];
+	squadra: TeamModel;
+	squadre: TeamModel[];
 	
 	constructor(private service: TeamService) {}
 	
 	ngOnInit() {
-		this.service.loadTeams().subscribe(response => this.squadre = response);
+		this.service.loadTeams(2).subscribe(response => this.squadre = response);
 	}
 }

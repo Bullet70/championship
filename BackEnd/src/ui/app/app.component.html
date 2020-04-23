@@ -1,4 +1,12 @@
 <div class="wrapper">
-	<app-menu [items]="countries"></app-menu>
+	<p-tabView>
+		<p-tabPanel [header]="item.name" *ngFor="let item of countries; let i = index">
+			<league [country]="item.id"></league>
+		</p-tabPanel>
+		<p-tabPanel [header]="Add">
+			<country-edit></country-edit>
+		</p-tabPanel>
+	</p-tabView>
+<!-- 	<app-menu [items]="countries"></app-menu> -->
 	<router-outlet></router-outlet>
 </div>
