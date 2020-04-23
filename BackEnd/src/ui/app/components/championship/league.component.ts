@@ -9,6 +9,7 @@ import { LeagueService } from 'app/services/league.service';
 })
 export class LeagueComponent implements OnChanges, OnInit {
 	@Input() country: number;
+	@Input() team: number;
 	leagues: LeagueModel[];
 
 	constructor(private snapshot: ActivatedRoute, private service: LeagueService) {

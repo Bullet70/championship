@@ -1,11 +1,7 @@
 <div class="wrapper">
 	<p-tabView>
 		<p-tabPanel [header]="item.description" *ngFor="let item of championships; let i = index" [selected]="i == 0">
-			<ranking></ranking>
 		</p-tabPanel>
 	</p-tabView>
-<!-- 	<championship-menu></championship-menu> -->
-<!-- 	<app-menu [items]="championships"></app-menu> -->
-<!-- 	<router-outlet></router-outlet> -->
 </div>
 

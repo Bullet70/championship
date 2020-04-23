@@ -10,6 +10,5 @@ export class TeamService {
 	
 	public loadTeams(league: number): Observable<TeamModel[]> {
 		return of(TEAMS.filter(item => item.league == league));
-//		return this.http.get<TeamModel[]>('teams');
 	}
 }
