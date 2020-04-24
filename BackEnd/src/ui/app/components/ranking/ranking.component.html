@@ -1,24 +1,29 @@
 <div>
 	<h1>CLASSIFICA</h1>
-	<p-button>Aggiungi</p-button>
 </div>
-<div>
-	<label>Nome Squadra</label>
-	<input type="text" [(ngModel)]="squadra.name" />
-</div>
-<div>
-	<label>Punti</label>
-	<input type="text" [(ngModel)]="squadra.points" />
-</div>
-<div *ngIf="squadre">
-	<p-table [value]="squadre">
+<div *ngIf="teams">
+	<p-table [value]="teams">
 		<ng-template pTemplate="header">
-			<th>Nome Squadra</th>
+			<th>Squadra</th>
+			<th>Partite</th>
+			<th>Vittorie</th>
+			<th>Pareggi</th>
+			<th>Sconfitte</th>
+			<th>Goal Fatti</th>
+			<th>Goal Subiti</th>
+			<th>Differenza Reti</th>
 			<th>Punti</th>
 		</ng-template>
 		<ng-template pTemplate="body" let-row>
 			<tr class="tableRow">
 				<td>{{row.name}}</td>
+				<td>{{row.games}}</td>
+				<td>{{row.victories}}</td>
+				<td>{{row.draws}}</td>
+				<td>{{row.defeats}}</td>
+				<td>{{row.goalsScored}}</td>
+				<td>{{row.goalsConceded}}</td>
+				<td>{{row.goalDifference}}</td>
 				<td>{{row.points}}</td>	
 			</tr>
 		</ng-template>

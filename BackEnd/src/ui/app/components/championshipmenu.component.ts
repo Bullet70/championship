@@ -8,20 +8,19 @@ import { MenuItem } from 'primeng/api';
 })
 export class ChampionshipmenuComponent {
 	
-	items:MenuItem[]
+	items1:MenuItem[]
 	
 	activeItem:MenuItem;
 	
 	 ngOnInit() {
 		 
-		 this.items = [
-           {label: 'Serie A', icon: 'pi pi-fw pi-seriea'},
-           {label: 'Serie B', icon: 'pi pi-fw pi-serieb'},
-           {label: 'Serie C', icon: 'pi pi-fw pi-seriec'},
+		 this.items1 = [
+           {label: 'Rosa', icon: 'pi pi-fw pi-rosa'},
+           {label: 'Calendario', icon: 'pi pi-fw pi-calendario'},
+           {label: 'Società', icon: 'pi pi-fw pi-società'},
           
        ];
 
-		 this.activeItem = this.items[0];
 	}
 }
 	

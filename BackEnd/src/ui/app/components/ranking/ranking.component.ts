@@ -6,8 +6,8 @@ import { TeamModel } from 'app/models';
 })
 export class RankingComponent implements OnInit {
 	@Input() championship;
-	squadra: TeamModel = new TeamModel();
-	squadre: TeamModel[]= new Array();
+	team: TeamModel = new TeamModel();
+	teams: TeamModel[]= new Array();
 	
 	constructor() {}
 	
