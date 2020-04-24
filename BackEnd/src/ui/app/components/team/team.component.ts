@@ -8,7 +8,7 @@ import { TeamService } from 'app/services/team.service';
 	templateUrl: 'team.component.html'
 })
 export class TeamComponent implements OnInit {
-	@Input() league: number;
+	@Input() championship: number;
 	teams: TeamModel[];
 	
 
@@ -18,6 +18,6 @@ export class TeamComponent implements OnInit {
 	
 	
 	ngOnInit() {
-		this.service.loadTeams(2).subscribe(response => this.teams = response);
+		this.service.loadTeams(this.championship).subscribe(response => this.teams = response);
 	}
 }

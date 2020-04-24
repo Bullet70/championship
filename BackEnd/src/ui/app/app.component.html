@@ -5,7 +5,6 @@
 			 <p-button (onClick)="edit(item)">Modify</p-button>
 			</ng-template>
 			<league *ngIf="isEditing" [country]="item.id"></league>
-			<team *ngIf="isEditing" [league]="item.id"></team>
 			<country-edit *ngIf="isEditing" [country]="country"></country-edit>
 		</p-tabPanel>
 		<p-tabPanel [header]="Add">

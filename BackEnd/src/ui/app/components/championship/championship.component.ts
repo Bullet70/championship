@@ -9,7 +9,6 @@ import { ChampionshipService } from 'app/services/championship.service';
 })
 export class ChampionshipComponent implements OnInit {
 	@Input() league: number;
-	@Input() team: number;
 	championships: ChampionshipModel[];
 
 	constructor(private snapshot: ActivatedRoute, private cService: ChampionshipService) {
