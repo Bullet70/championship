@@ -30,8 +30,9 @@ export class AppComponent implements OnInit {
 		return new CountryModel();
 	}
 	
-	edit(country: CountryModel) {
-//		event.preventDefault();
+	edit(event, country: CountryModel) {
+		console.log(event);
+		event.stopPropagation();
 		console.log(event);
 		this.isEditing = true;
 		this.country = country;
