@@ -29,6 +29,7 @@ import { ChampionshipmenuComponent } from 'app/components/championshipmenu.compo
 import { LeagueService } from 'app/services/league.service';
 import { ChampionshipComponent } from 'app/components/championship/championship.component';
 import { CountryEditComponent } from 'app/components/country/country-edit.component';
+import { RankingService } from 'app/services/ranking.service';
 
 
 @NgModule({
@@ -71,7 +72,7 @@ import { CountryEditComponent } from 'app/components/country/country-edit.compon
 		ChampionshipService,
 		CountryService,
 		LeagueService,
-		
+		RankingService,
 		{ provide: HTTP_INTERCEPTORS, useClass: BackEndInterceptor, multi: true }
 	],
 	bootstrap: [AppComponent],

@@ -1,12 +1,26 @@
-.wrapper {
-	align-content: center;
-	background-color: aqua;	
+.title {
+	text-align: center;
+	background-color: white;
 }
+
+.wrapper  {
+	text-align: center;
+	background-color: black;
+} 
 
 .tableRow td {
 	text-align: center;
 }
 
-.container {
+.flex-container {
 	display: flex;
+	flex-direction: column;
 }
+
+.flex-team {
+	display: flex;
+	color: white;
+	flex-direction: column;
+}
+
+.flex-ranking {}
