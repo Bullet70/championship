@@ -2,7 +2,6 @@
 	<p-tabView>
 		<p-tabPanel [header]="item.description" *ngFor="let item of championships; let i = index" [selected]="i == 0">
 		<informationchampionship [championship]="item.league"></informationchampionship>
-		<ranking></ranking>
 		</p-tabPanel>
 	</p-tabView>
 </div>
