@@ -7,7 +7,7 @@
 			<league *ngIf="isEditing" [country]="item.id"></league>
 			<country-edit *ngIf="isEditing" [country]="country"></country-edit>
 		</p-tabPanel>
-		<p-tabPanel [header]="Add">
+		<p-tabPanel header="Add">
 			<country-edit [country]="new()"></country-edit>
 		</p-tabPanel>
 	</p-tabView>

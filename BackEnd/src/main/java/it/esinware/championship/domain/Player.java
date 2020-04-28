@@ -12,6 +12,7 @@ import lombok.Data;
 public class Player {
 	@Id
 	private Long id;
+	private String alias;
 	private String surname;
 	private String name;
 	private PlayerRole role;
@@ -20,10 +21,9 @@ public class Player {
 
 	protected Player() {}
 
-	public Player(String surname, String name) {
-		if(surname == null || name == null)
+	public Player(String alias) {
+		if(alias == null)
 			throw new NullPointerException();
-		this.surname = surname;
-		this.name = name;
+		this.alias = alias;
 	}
 }
