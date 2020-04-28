@@ -30,7 +30,8 @@ import { LeagueService } from 'app/services/league.service';
 import { ChampionshipComponent } from 'app/components/championship/championship.component';
 import { CountryEditComponent } from 'app/components/country/country-edit.component';
 import { RankingService } from 'app/services/ranking.service';
-
+import { InformationchampionshipComponent } from 'app/components/championship/informationchampionship.component';
+import { InformationchampionshipService } from 'app/services/informationchampionship.service';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { RankingService } from 'app/services/ranking.service';
 		ChampionshipComponent,
 		ChampionshipmenuComponent,
 		CountryEditComponent,
+		InformationchampionshipComponent,
 		
 	],
 	imports: [
@@ -74,6 +76,7 @@ import { RankingService } from 'app/services/ranking.service';
 		CountryService,
 		LeagueService,
 		RankingService,
+		InformationchampionshipService,
 		{ provide: HTTP_INTERCEPTORS, useClass: BackEndInterceptor, multi: true }
 	],
 	bootstrap: [AppComponent],
