@@ -1,0 +1,8 @@
+<div class="wrapper">
+	<p-tabView>
+		<p-tabPanel [header]="item.name" *ngFor="let item of informationchampionships; let i = index" [selected]="i == 0">
+		<team [informationchampionship]="item.league"></team>
+		</p-tabPanel>
+	</p-tabView>
+</div>
+

@@ -1,3 +1,6 @@
+<div class="title">
+<h1>ONE FOOTBALL</h1>
+</div>
 <div class="wrapper">
 	<p-tabView (onChange)="changeTab($event)">
 		<p-tabPanel *ngFor="let item of countries; let i = index">
@@ -11,6 +14,11 @@
 			<country-edit [country]="new()"></country-edit>
 		</p-tabPanel>
 	</p-tabView>
+	<!--div class="flex-container">
+	<div class="flex-team">
+	<div class="flex-ranking">
+	</div>
+	</div>
 <!-- 	<app-menu [items]="countries"></app-menu> -->
 	<router-outlet></router-outlet>
 </div>
