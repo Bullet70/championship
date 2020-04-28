@@ -14,17 +14,17 @@
 			<th>Differenza Reti</th>
 			<th>Punti</th>
 		</ng-template>
-		<ng-template pTemplate="body" let-row>
-			<tr class="tableRow">
-				<td>{{row.name}}</td>
-				<td>{{row.games}}</td>
-				<td>{{row.victories}}</td>
-				<td>{{row.draws}}</td>
-				<td>{{row.defeats}}</td>
-				<td>{{row.goalsScored}}</td>
-				<td>{{row.goalsConceded}}</td>
-				<td>{{row.goalDifference}}</td>
-				<td>{{row.points}}</td>	
+		<ng-template pTemplate="body" let-RANKINGS>
+			<tr>
+				<td>{{RANKINGS.name}}</td>
+				<td>{{RANKINGS.games}}</td>
+				<td>{{RANKINGS.victories}}</td>
+				<td>{{RANKINGS.draws}}</td>
+				<td>{{RANKINGS.defeats}}</td>
+				<td>{{RANKINGS.goalsScored}}</td>
+				<td>{{RANKINGS.goalsConceded}}</td>
+				<td>{{RANKINGS.goalDifference}}</td>
+				<td>{{RANKINGS.points}}</td>	
 			</tr>
 		</ng-template>
 	</p-table>

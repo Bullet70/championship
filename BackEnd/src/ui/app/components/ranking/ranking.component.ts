@@ -17,8 +17,7 @@ export class RankingComponent implements OnInit {
 }
 
 
-//import { Component, Input, OnInit, OnChanges, SimpleChanges } from '@angular/core';
-//import { ActivatedRoute } from '@angular/router';
+//import { Component, OnInit } from '@angular/core';
 //import { RankingModel } from 'app/models/ranking.model';
 //import { RankingService } from 'app/services/ranking.service';
 
@@ -27,13 +26,12 @@ export class RankingComponent implements OnInit {
 //	templateUrl: 'ranking.component.html'
 //})
 //export class RankingComponent implements OnInit {
-//	@Input() championship: number;
-//	rankings: RankingModel[]= new Array();
+
+//rankings: RankingModel[];	
 	
-//	constructor(private snapshot: ActivatedRoute, private service: RankingService) {}
-//	ngOnChanges(changes: SimpleChanges): void {}
+//	constructor(private service: RankingService) {}
 	
 //	ngOnInit() {
-//		this.service.loadRankings(this.championship).subscribe(response => this.rankings = response);
+//		this.service.getRankings().subscribe(rankings => this.rankings = rankings);
 //	}
 //}
