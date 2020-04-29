@@ -1,7 +1,13 @@
 <div class="wrapper">
 	<p-tabView>
-		<p-tabPanel [header]="item.name" *ngFor="let item of informationchampionships; let i = index" [selected]="i == 0">
-		<team [informationchampionship]="item.league"></team>
+		<p-tabPanel header="Squadre">
+		</p-tabPanel>
+		<p-tabPanel header="Classifica">
+		<ranking></ranking>
+		</p-tabPanel>
+		<p-tabPanel header="Calendario">
+		</p-tabPanel>
+		<p-tabPanel header="Marcatori">
 		</p-tabPanel>
 	</p-tabView>
 </div>
