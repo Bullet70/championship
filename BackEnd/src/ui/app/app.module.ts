@@ -15,7 +15,6 @@ import { SplitButtonModule } from 'primeng/splitbutton';
 import { MenuComponent } from 'app/components/menu.components';
 import { TeamComponent } from 'app/components/team/team.component';
 import { AppRoutingModule } from './app-routing.module';
-import { FixturesModule } from 'app/components/fixtures/fixtures.module';
 import { TeamService } from 'app/services/team.service';
 import { PlayerComponent } from 'app/components/player/player.component';
 import { PlayerService } from 'app/services/player.service';
@@ -33,6 +32,7 @@ import { RankingService } from 'app/services/ranking.service';
 import { InformationchampionshipComponent } from 'app/components/championship/informationchampionship.component';
 import { InformationchampionshipService } from 'app/services/informationchampionship.service';
 import { RankinggoalComponent } from 'app/components/ranking/rankinggoal.component';
+import { FixturesComponent } from 'app/components/fixtures/fixtures.component';
 
 
 @NgModule({
@@ -48,6 +48,7 @@ import { RankinggoalComponent } from 'app/components/ranking/rankinggoal.compone
 		CountryEditComponent,
 		InformationchampionshipComponent,
 		RankinggoalComponent,
+		FixturesComponent,
 		
 	],
 	imports: [
@@ -64,7 +65,6 @@ import { RankinggoalComponent } from 'app/components/ranking/rankinggoal.compone
 		TabMenuModule,
 		SplitButtonModule,
 		AppRoutingModule,
-		FixturesModule,
 		OrderListModule,
 		TabViewModule
 
