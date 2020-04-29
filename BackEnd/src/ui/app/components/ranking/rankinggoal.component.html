@@ -1,0 +1,13 @@
+<div>
+	<h1>CLASSIFICA MARCATORI</h1>
+</div>
+<div *ngIf="rankinggoals">
+	<p-table [value]="rankinggoals">
+		<ng-template pTemplate="header">
+			<th>Cognome</th>
+			<th>Nome</th>
+			<th>Squadra</th>
+			<th>Goal</th>
+		</ng-template>
+	</p-table>
+</div>

@@ -5,6 +5,7 @@ import { PlayerComponent } from 'app/components/player/player.component';
 import { RankingComponent } from 'app/components/ranking/ranking.component';
 import { ChampionshipComponent } from 'app/components/championship/championship.component';
 import { InformationchampionshipComponent } from 'app/components/championship/informationchampionship.component';
+import { RankinggoalComponent } from 'app/components/ranking/rankinggoal.component';
 
 const routes: Routes = [
 	{ path: 'teams', component: TeamComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
 	{ path: 'rankings', component: RankingComponent },
 	{ path: 'championships', component: ChampionshipComponent },
 	{ path: 'informationchampionships', component: InformationchampionshipComponent },
+	{ path: 'rankinggoals', component: RankinggoalComponent },
 ]
 
 @NgModule( {

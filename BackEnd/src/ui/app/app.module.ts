@@ -32,6 +32,7 @@ import { CountryEditComponent } from 'app/components/country/country-edit.compon
 import { RankingService } from 'app/services/ranking.service';
 import { InformationchampionshipComponent } from 'app/components/championship/informationchampionship.component';
 import { InformationchampionshipService } from 'app/services/informationchampionship.service';
+import { RankinggoalComponent } from 'app/components/ranking/rankinggoal.component';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { InformationchampionshipService } from 'app/services/informationchampion
 		ChampionshipmenuComponent,
 		CountryEditComponent,
 		InformationchampionshipComponent,
+		RankinggoalComponent,
 		
 	],
 	imports: [
