@@ -34,6 +34,7 @@ import { InformationchampionshipService } from 'app/services/informationchampion
 import { RankinggoalComponent } from 'app/components/ranking/rankinggoal.component';
 import { FixturesComponent } from 'app/components/fixtures/fixtures.component';
 import { RoundService } from 'app/services/round.service';
+import { InformationteamComponent } from 'app/components/team/informationteam.component';
 
 
 
@@ -51,6 +52,7 @@ import { RoundService } from 'app/services/round.service';
 		InformationchampionshipComponent,
 		RankinggoalComponent,
 		FixturesComponent,
+		InformationteamComponent,
 	
 		
 	],

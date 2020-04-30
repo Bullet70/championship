@@ -7,6 +7,7 @@ import { ChampionshipComponent } from 'app/components/championship/championship.
 import { InformationchampionshipComponent } from 'app/components/championship/informationchampionship.component';
 import { RankinggoalComponent } from 'app/components/ranking/rankinggoal.component';
 import { FixturesComponent } from 'app/components/fixtures/fixtures.component';
+import { InformationteamComponent } from 'app/components/team/informationteam.component';
 
 const routes: Routes = [
 	{ path: 'teams', component: TeamComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
 	{ path: 'informationchampionships', component: InformationchampionshipComponent },
 	{ path: 'rankinggoals', component: RankinggoalComponent },
 	{ path: 'fixtures', component: FixturesComponent},
+	{ path: 'informationteams', component: InformationteamComponent },
 	
 ]
 

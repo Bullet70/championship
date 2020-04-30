@@ -2,11 +2,12 @@
 	<h1>CALENDARIO</h1>
 </div>
 <div *ngFor="let round of rounds">
-	<p-table>
+	<h1>{{round.numberround}}</h1>
+	<p-table [value]="round.games">
 		<ng-template pTemplate="header">
 			<th>Data</th>
 			<th>Orario</th>
-			<th>{{round.numberround}}</th>
+			<th>Partite</th>
 			<th>Risultato</th>
 		</ng-template>	
 	</p-table>
