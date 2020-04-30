@@ -33,6 +33,8 @@ import { InformationchampionshipComponent } from 'app/components/championship/in
 import { InformationchampionshipService } from 'app/services/informationchampionship.service';
 import { RankinggoalComponent } from 'app/components/ranking/rankinggoal.component';
 import { FixturesComponent } from 'app/components/fixtures/fixtures.component';
+import { RoundService } from 'app/services/round.service';
+
 
 
 @NgModule({
@@ -49,6 +51,7 @@ import { FixturesComponent } from 'app/components/fixtures/fixtures.component';
 		InformationchampionshipComponent,
 		RankinggoalComponent,
 		FixturesComponent,
+	
 		
 	],
 	imports: [
@@ -79,6 +82,7 @@ import { FixturesComponent } from 'app/components/fixtures/fixtures.component';
 		LeagueService,
 		RankingService,
 		InformationchampionshipService,
+		RoundService,
 		{ provide: HTTP_INTERCEPTORS, useClass: BackEndInterceptor, multi: true }
 	],
 	bootstrap: [AppComponent],

@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { GiornataModel } from 'app/models';
+import { ActivatedRoute } from '@angular/router';
+import { RoundModel } from 'app/models/round.model';
+import { RoundService } from 'app/services/round.service';
 
 @Component({
 	selector: 'fixtures',
@@ -7,11 +9,10 @@ import { GiornataModel } from 'app/models';
 })
 export class FixturesComponent implements OnInit {
 	@Input() championship;
-	giornata: GiornataModel= new GiornataModel();
-	giornate: GiornataModel[]= new Array();
+	rounds: RoundModel[];
 	
-	constructor() {}
+	constructor(private snapshot: ActivatedRoute, private service: RoundService) {}
 	ngOnInit() {
-		
+		this.service.loadRounds(this.rounds).subscribe(response => this.rounds = response);
 	}
 }

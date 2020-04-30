@@ -16,6 +16,7 @@ const routes: Routes = [
 	{ path: 'informationchampionships', component: InformationchampionshipComponent },
 	{ path: 'rankinggoals', component: RankinggoalComponent },
 	{ path: 'fixtures', component: FixturesComponent},
+	
 ]
 
 @NgModule( {

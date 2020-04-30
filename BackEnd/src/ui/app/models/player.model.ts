@@ -3,4 +3,5 @@ export class PlayerModel {
 	surname: string;
 	name: string;
 	team: string;
-}
+	goal: number;
+} 
