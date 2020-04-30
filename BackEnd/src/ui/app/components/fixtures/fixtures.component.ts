@@ -13,6 +13,6 @@ export class FixturesComponent implements OnInit {
 	
 	constructor(private snapshot: ActivatedRoute, private service: RoundService) {}
 	ngOnInit() {
-		this.service.loadRounds(this.rounds).subscribe(response => this.rounds = response);
+		this.service.loadRounds().subscribe(response => this.rounds = response);
 	}
 }

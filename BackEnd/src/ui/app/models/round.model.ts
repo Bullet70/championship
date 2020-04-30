@@ -2,7 +2,7 @@ export class RoundModel {
 	id: number;
 	numberround: string;
 }
-export const ROUNDS: RoundModel[] =[
+export const ROUNDS: RoundModel[] = [
 	{id: 1, numberround: '1 GIORNATA'},
 	{id: 2, numberround: '2 GIORNATA'},
 	{id: 3, numberround: '3 GIORNATA'},
@@ -40,6 +40,6 @@ export const ROUNDS: RoundModel[] =[
 	{id: 35, numberround: '35 GIORNATA'},
 	{id: 36, numberround: '36 GIORNATA'},
 	{id: 37, numberround: '37 GIORNATA'},
-	{id: 38, numberround: '38 GIORNATA'},
-]
+	{id: 38, numberround: '38 GIORNATA'}
+];
 
