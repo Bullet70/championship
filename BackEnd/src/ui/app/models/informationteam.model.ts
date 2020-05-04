@@ -6,7 +6,7 @@ export class InformationteamModel {
 }
 export const INFORMATIONTEAMS: InformationteamModel[] = [
 	{ id: 1, name:"Rosa", team: 1, league: 1 },
-	{ id: 2, name:"Calendario", team: 1, league: 1 },
+	{ id: 3, name:"Calendario", team: 1, league: 1 },
 	{ id: 3, name:"Società", team: 1, league: 1 },
 	{ id: 4, name:"Rosa", team: 2, league: 1 },
 	{ id: 5, name:"Calendario", team: 2, league: 1 },

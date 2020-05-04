@@ -21,7 +21,7 @@ export const TEAMS: TeamModel[] = [
 	{ id: 12, league: 1, name: 'Napoli', championship: 1, informationchampionship: 1  },
 	{ id: 13, league: 1, name: 'Parma', championship: 1, informationchampionship: 1  },
 	{ id: 14, league: 1, name: 'Roma', championship: 1, informationchampionship: 1  },
-	{ id: 15, league: 1, name: 'Sampdoria',  championship: 1, informationchampionship: 1  },
+	{ id: 15, league: 1, name: 'Sampdoria',  championship: 1, informationchampionship: 1 },
 	{ id: 16, league: 1, name: 'Sassuolo', championship: 1, informationchampionship: 1  },
 	{ id: 17, league: 1, name: 'Spal', championship: 1, informationchampionship: 1  },
 	{ id: 18, league: 1, name: 'Torino', championship: 1, informationchampionship: 1 },

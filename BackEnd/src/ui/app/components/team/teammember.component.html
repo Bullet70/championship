@@ -1,0 +1,13 @@
+<div>
+	<h1>ROSA</h1>
+</div>
+<div *ngIf="teammembers">
+	<p-table [value]="teammembers">
+		<ng-template pTemplate="header">
+			<th>Cognome</th>
+			<th>Nome</th>
+			<th>Ruolo</th>
+			<th>Data di nascita</th>
+		</ng-template>
+	</p-table>
+</div>

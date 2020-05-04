@@ -35,7 +35,8 @@ import { RankinggoalComponent } from 'app/components/ranking/rankinggoal.compone
 import { FixturesComponent } from 'app/components/fixtures/fixtures.component';
 import { RoundService } from 'app/services/round.service';
 import { InformationteamComponent } from 'app/components/team/informationteam.component';
-
+import { TeammemberComponent } from 'app/components/team/teammember.component';
+import { PrivatefixturesComponent } from 'app/components/fixtures/privatefixtures.component';
 
 
 @NgModule({
@@ -53,6 +54,8 @@ import { InformationteamComponent } from 'app/components/team/informationteam.co
 		RankinggoalComponent,
 		FixturesComponent,
 		InformationteamComponent,
+		TeammemberComponent,
+		PrivatefixturesComponent,
 	
 		
 	],
